@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar class="homeHeader">
+    <ion-button fill="outline" class="headButton" color="primary">Log In</ion-button>
+    <ion-button fill="outline" class="headButton" color="primary">Sign Up</ion-button>
+    <ion-title class="webTitle">
+      PeekDoc
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar class="filterBoxes">
+  <ion-searchbar></ion-searchbar>
+  <ion-input class="locationInput" placeholder="City/Zip/Address..."></ion-input>
+  <ion-list class="needsList">
+    <ion-item>
+      <ion-label>Diabeties</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ASD</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>...</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-toolbar>
+
+
+
+<ion-content>
+    <ion-card (click)="nextpage()" routerLink="/doc-info">
+      <ion-avatar>
+        <img src="https://bit.ly/36qMUof">
+      </ion-avatar>
+      <ion-card-content>
+        <h1>John Doe</h1>
+        <h2>Some kind of info about John Doe</h2>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="nextpage()" routerLink="/doc-info">
+      <ion-avatar>
+        <img src="https://bit.ly/36qMUof">
+      </ion-avatar>
+      <ion-card-content>
+        <h1>[Name]</h1>
+        <h2>[Info]</h2>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-avatar>
+        <img src="https://bit.ly/36qMUof">
+      </ion-avatar>
+      <ion-card-content>
+        <h1>[Name]</h1>
+        <h2>[Info]</h2>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-avatar>
+        <img src="https://bit.ly/36qMUof">
+      </ion-avatar>
+      <ion-card-content>
+        <h1>[Name]</h1>
+        <h2>[Info]</h2>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

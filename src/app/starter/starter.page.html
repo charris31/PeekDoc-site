@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar class="homeHeader">
+    <ion-button fill="outline" class="headButton" color="primary">Log In</ion-button>
+    <ion-button fill="outline" class="headButton" color="primary">Sign Up</ion-button>
+    <ion-title class="webTitle">
+      PeekDoc
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="bigText">Help us find what you need so you can navigate to your doctors in the easiest way possible.</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-content 
+[scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()">
+  
+  <ion-list>
+    <ion-label class="buttonHeaderText">
+      Choose a category of doctors that you would like to look for.
+    </ion-label>
+    <ion-label>
+      <ion-button color="secondary" class="doctorButtons" (click)="nextpage()" routerLink="/filter">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Physicians
+      </ion-button>
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Pediatricians
+      </ion-button>
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Dentists
+      </ion-button>
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Gynecologist
+      </ion-button>
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Dentists
+      </ion-button>
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Gynecologist
+      </ion-button> 
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Dentists
+      </ion-button>
+
+      <ion-button color="secondary" class="doctorButtons">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Gynecologist
+      </ion-button> 
+
+      
+    </ion-label>
+  </ion-list>
+</ion-content>
+
+<!-- <ion-card>
+  <ion-card-header>
+  <ion-card-title>Choose a category of doctors that you would like to look for.</ion-card-title>
+  </ion-card-header>
+  <ion-button expand="block" class="doctorButtons" color="secondary" size="large">Dentist</ion-button>
+</ion-card> -->

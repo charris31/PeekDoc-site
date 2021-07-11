@@ -1,21 +1,31 @@
 <ion-header>
   <ion-toolbar class="homeHeader">
-    <ion-button color="secondary">Log In</ion-button>
-    <ion-button color="secondary">Sign Up</ion-button>
-    <ion-button color="secondary">Service</ion-button>
-    <ion-button color="secondary">Home</ion-button>
+    <ion-button fill="outline" class="headButton" color="primary">Log In</ion-button>
+    <ion-button fill="outline" class="headButton" color="primary">Sign Up</ion-button>
+    <ion-button fill="outline" class="headButton" color="primary">Service</ion-button>
+    <ion-button fill="outline" class="headButton" color="primary">Home</ion-button>
     <ion-title class="webTitle">
       PeekDoc
     </ion-title>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle class="homeBigtext">Search for medical help with the doctor of your liking.</ion-card-subtitle>
+        <ion-card-title class="homeSmalltext">Search for hundreds of doctors around you that specialize in your need. All in one page.</ion-card-title>
+        <ion-button class="bigButton" color=secondary (click)="nextpage()" routerLink="/starter">Begin Looking Now</ion-button>
+      </ion-card-header>
+    
+      
+    </ion-card>
   </ion-toolbar>
 
 <!-- Sub Header for Home Page -->
-<ion-toolbar class="homeSub">
+<!-- <ion-toolbar class="homeSub">
   <ion-title class="homeBigtext">Search for medical help with the doctor of your liking</ion-title>
   <ion-title class="homeSmalltext">Search for hundreds of doctors around you that specialize in your need. All in one page.</ion-title>
   <ion-button class="bigButton" color="secondary">Begin Looking Now</ion-button>
+  <ion-icon size="large"></ion-icon>
 </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
   <!-- <div id="container"> -->
     <!-- <strong>Ready to create an app?</strong> -->

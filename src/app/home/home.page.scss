@@ -1,22 +1,33 @@
 .homeHeader {
-  --background: #9DDAEC;
+  --background: url('https://wallpapercave.com/wp/wp2968502.jpg') no-repeat 100% 50%;
+  height: 817px;
 }
 .webTitle {
- font-family: 'Redressed'; color: #2C3D42;
- font-size: xx-large;
+ font-family: 'Roboto'; color: #2C3D42;
+ font-size: 71px;
+ font-style: normal;
+ font-weight: normal;
  text-shadow: 2px 2px #1EBFEE;
  text-align: left;
+ height: 105px;
 }
 
-ion-button {
+.headButton {
   float: right;
   margin-right: 50px;
+  font-size: 25px;
+  height: 65px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: 20%;
 }
 .bigButton {
-  opacity: 60%;
-  height: 60px;
-  width: 280px;
-  float: right;
+  font-size: 30px;
+  height: 109px;
+  width: 557px;
+  margin-left: 17%;
+  margin-top: 75px;
+
 }
 
 ion-title {
@@ -24,24 +35,41 @@ ion-title {
   color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: right;
-  padding-left: 5%;
+}
+
+ion-card {
+  width: 45%;
+  float: right;
+  margin-top: 100px;
+  background: rgba(255, 255, 255, 0.774);
+  height: 945px;
+  box-shadow: none;
+  border: none;
 }
 
 .homeBigtext {
-  font-size: x-large;
-  vertical-align: middle;
-  line-height: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: black;
+  // font-size: x-large;
+  // vertical-align: middle;
+  // line-height: normal;
+  // top: 0%;
 }
 .homeSmalltext {
-  font-size: medium;
-  vertical-align: middle;
+  font-family: sans-serif;
   font-weight: normal;
+  font-size: 30px;
+  color: black;
+  margin-top: 20px;
 }
 
 .homeSub {
   --background: url('https://wallpapercave.com/wp/wp2968502.jpg') no-repeat 100% 50%;
-  height: 500px;
+  height: 718px;
 }
+
 
 // #container {
 //   text-align: center;

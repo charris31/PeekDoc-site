@@ -1,0 +1,80 @@
+.webTitle {
+    font-family: 'Roboto Slab'; color: #2C3D42;
+    font-size: 71px;
+    font-style: normal;
+    font-weight: normal;
+    text-shadow: 2px 2px #1EBFEE;
+    text-align: left;
+    height: 105px;
+}
+.headButton {
+    float: right;
+    margin-right: 50px;
+    font-size: 25px;
+    height: 65px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+  .homeHeader {
+    --background: #9DDAEC;
+    height: 105px;
+}
+
+.suggestBox {
+    width: 20%;
+    margin-left: 150px;
+    margin-bottom: 100px;
+    height: 840px;
+    --background: #79CAC5;
+}
+
+.docBox {
+    --background: #9cebe6;
+}
+
+.bigCard {
+    width: 1440px;
+    height: 840px;
+    margin-bottom: 100px;
+    --background: #79CAC5;
+    margin-left: 45px;
+}
+
+.infoDirection {
+    height: 400px;
+    width: 950px;
+    margin-left: 45px;
+    --background: #9cebe6;
+}
+
+.moreAbout {
+    height: 300px;
+    width: 600px;
+    margin-top: -20px;
+    margin-left: 45px;
+    --background: #9cebe6;
+}
+
+.ratingBox {
+    margin-top: -377px;
+    width: 311px;
+    height: 300px;
+    float: right;
+    margin-right: 322px;
+    --background: #9cebe6;
+}
+
+.bigInfoBox {
+    margin-top: -650px;
+    float: right;
+    width: 246px;
+    height: 483px;
+    --background: #9cebe6;
+}
+
+.docImg {
+    float: right;
+    margin-top: -800px;
+    margin-right: 115px;
+    transform: scale(4.5);
+}
