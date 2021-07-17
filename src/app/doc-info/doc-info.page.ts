@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var google;
 
 @Component({
   selector: 'app-doc-info',
@@ -13,3 +14,5 @@ export class DocInfoPage implements OnInit {
   }
 
 }
+
+

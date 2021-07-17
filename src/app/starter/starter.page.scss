@@ -33,7 +33,7 @@
 }
 
 ion-list {
-    width: 45%;
+    width: 1575px;
     margin: -100px auto;
     background-color: #AADBFF;
     height: fit-content;
@@ -41,11 +41,16 @@ ion-list {
 
 
 ion-card {
-    width: 65%;
+    width: 1000px;
     margin: auto;
     background: none;
     box-shadow: none;
     border: none;
+}
+
+.bigBox {
+    width: 1575px;
+    height: 650px;
 }
 
 .buttonHeaderText {
@@ -55,9 +60,9 @@ ion-card {
     text-align: center;
 }
 .doctorButtons {
-    font-size: 35px;
-    width: 80%;
+    font-size: 20px;
+    width: 20%;
     height: 100px;
-    margin-left: 80px;
-    margin-top: 20px;
+    // margin-left: 80px;
+    margin-top: 50px;
 }

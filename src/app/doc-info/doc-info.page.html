@@ -11,7 +11,7 @@
 <ion-item>
   <ion-card class="suggestBox">
     <ion-card-header>
-      <ion-card-title>Suggestions</ion-card-title>
+      <ion-card-title class="suggestTitle">Suggestions</ion-card-title>
     </ion-card-header>
     <ion-card class="docBox">
       <ion-avatar class="suggestBoxImg">
@@ -27,34 +27,53 @@
 
   <ion-card class="bigCard">
     <ion-card-header>
-      <ion-card_title>Doctor Info and Dicretion</ion-card_title>
+      <ion-card-title class="sectionHeader">Doctor Info and Dicretions</ion-card-title>
     </ion-card-header>
     <ion-card class="infoDirection">
-      <ion-label>Contact:</ion-label>
+      <ion-card-content>
+        <ion-label class="cardText">Contact:</ion-label>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-label class="cardText">Directions:</ion-label>
+        <ion-label class="mapImg">
+          <img src="https://bit.ly/3xOeN5s">
+        </ion-label>
+      </ion-card-content>
+
     </ion-card>
 
     <ion-card-header>
-      <ion-card_title>More about the doctor</ion-card_title>
+      <ion-card-title class="sectionHeader">More About the Doctor</ion-card-title>
     </ion-card-header>
     <ion-card class="moreAbout">
-      <ion-label>Contact:</ion-label>
+      <ion-label></ion-label>
     </ion-card>
     
     <ion-card-header>
-      <ion-card_title>More about the doctor</ion-card_title>
+      <ion-card-title>Ratings and Feedback </ion-card-title>
     </ion-card-header>
     <ion-card class="ratingBox">
-      <ion-label>Contact:</ion-label>
+      <ion-label></ion-label>
     </ion-card>
 
     <ion-avatar class="docImg">
       <img src="https://bit.ly/36qMUof">
     </ion-avatar>
     <ion-card-header>
-      <ion-card_title>More about the doctor</ion-card_title>
+      <ion-card-title></ion-card-title>
     </ion-card-header>
     <ion-card class="bigInfoBox">
-      <ion-label>Info</ion-label>
+      <ion-card-title>Info</ion-card-title>
+      <ion-card-content class="infoText">
+      <ion-label>Name: John Doe</ion-label>
+      <ion-label>Gender: Male</ion-label>
+      <ion-label>Age: 21</ion-label>
+      <ion-label>Race: African American</ion-label>
+      <ion-label>Birth Place: Los Angeles, CA</ion-label>
+      <ion-label>Studied: Charles Drew University</ion-label>
+      <ion-label>Specialties: Physician</ion-label>
+      <ion-label>Description: ...</ion-label>
+    </ion-card-content>
     </ion-card>
   </ion-card>
 </ion-item>

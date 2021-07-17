@@ -1,5 +1,8 @@
 {
   "name": "peekDoc-home",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
