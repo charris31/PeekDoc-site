@@ -3,7 +3,7 @@
     <ion-button fill="outline" class="headButton" color="primary">Log In</ion-button>
     <ion-button fill="outline" class="headButton" color="primary">Sign Up</ion-button>
     <ion-title class="webTitle">
-      PeekDoc
+      Doc Harmony
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -27,33 +27,37 @@
 
   <ion-card class="bigCard">
     <ion-card-header>
-      <ion-card-title class="sectionHeader">Doctor Info and Dicretions</ion-card-title>
+      <ion-card-title class="sectionHeader">Doctor Location and Business</ion-card-title>
     </ion-card-header>
     <ion-card class="infoDirection">
       <ion-card-content>
-        <ion-label class="cardText">Contact:</ion-label>
+        <ion-label class="cardText">Office Location: {{business.location}}</ion-label>
       </ion-card-content>
       <ion-card-content>
-        <ion-label class="cardText">Directions:</ion-label>
-        <ion-label class="mapImg">
-          <img src="https://bit.ly/3xOeN5s">
-        </ion-label>
+        <ion-label class="cardText">Hours:</ion-label>
       </ion-card-content>
 
     </ion-card>
 
-    <ion-card-header>
-      <ion-card-title class="sectionHeader">More About the Doctor</ion-card-title>
-    </ion-card-header>
+    <ion-toolbar class="sectionToolbar">
+      <ion-label class="sectionHeader">Contact and More Info</ion-label>
+      <ion-label class="sectionHeader" id="contactHeader">Ratings and Feedback</ion-label>
+    </ion-toolbar>
+
+
     <ion-card class="moreAbout">
-      <ion-label></ion-label>
+      <ion-label>Phone: {{doctor.phoneNumber}}</ion-label>
+      <ion-label>Webpage: {{doctor.webPage}}</ion-label>
+      <ion-label>LinkedIn: {{doctor.media}}</ion-label>
+      <ion-label>Twitter: {{doctor.media}}</ion-label>
+      <ion-label>Facebook: {{doctor.media}}</ion-label>
     </ion-card>
-    
-    <ion-card-header>
-      <ion-card-title>Ratings and Feedback </ion-card-title>
-    </ion-card-header>
+
     <ion-card class="ratingBox">
-      <ion-label></ion-label>
+      <ion-card-content class="rating">
+        <img src="https://bit.ly/36M710c">
+      </ion-card-content>
+
     </ion-card>
 
     <ion-avatar class="docImg">
@@ -65,15 +69,15 @@
     <ion-card class="bigInfoBox">
       <ion-card-title>Info</ion-card-title>
       <ion-card-content class="infoText">
-      <ion-label>Name: John Doe</ion-label>
-      <ion-label>Gender: Male</ion-label>
-      <ion-label>Age: 21</ion-label>
-      <ion-label>Race: African American</ion-label>
-      <ion-label>Birth Place: Los Angeles, CA</ion-label>
-      <ion-label>Studied: Charles Drew University</ion-label>
-      <ion-label>Specialties: Physician</ion-label>
-      <ion-label>Description: ...</ion-label>
-    </ion-card-content>
+        <ion-label>Name: {{doctor.name}}</ion-label>
+        <ion-label>Gender: {{doctor.gender}}</ion-label>
+        <ion-label>Age: {{doctor.age}}</ion-label>
+        <ion-label>Race: {{doctor.race}}</ion-label>
+        <ion-label>Birth Place: {{doctor.birth}}</ion-label>
+        <ion-label>Studied: {{doctor.school}}</ion-label>
+        <ion-label>Specialties: {{doctor.specialties}}</ion-label>
+        <ion-label>Hobbies: {{doctor.hobbies}}</ion-label>
+      </ion-card-content>
     </ion-card>
   </ion-card>
 </ion-item>
