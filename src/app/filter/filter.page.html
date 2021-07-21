@@ -9,8 +9,7 @@
 </ion-header>
 
 <ion-toolbar class="filterBoxes">
-  <ion-searchbar (ionInput)="filterArray($event)"></ion-searchbar>
-  <ion-input class="locationInput" placeholder="City/Zip/Address..."></ion-input>
+  <ion-searchbar (ionInput)="filterData($event)"></ion-searchbar>
 </ion-toolbar>
 
 <ion-card class="bigList">
@@ -28,7 +27,7 @@
         </ion-card>
       </ion-item>
 
-    <ion-card (click)="nextpage()" routerLink="/doc-info">
+    <!-- <ion-card (click)="nextpage()" routerLink="/doc-info">
       <ion-avatar>
         <img src="https://bit.ly/36qMUof">
       </ion-avatar>
@@ -37,6 +36,6 @@
         <h2>Physician</h2>
         <p>I am a good doctor for you!</p>
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
   </ion-content>
 </ion-card>

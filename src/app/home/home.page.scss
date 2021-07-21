@@ -40,14 +40,15 @@ ion-title {
 ion-card {
   width: 45%;
   float: right;
-  margin-top: 100px;
-  background: rgba(255, 255, 255, 0.774);
+  margin-top: 1px;
+  background: white;
   height: 945px;
   box-shadow: none;
   border: none;
 }
 
 .homeBigtext {
+  margin-top: 125px;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 50px;
