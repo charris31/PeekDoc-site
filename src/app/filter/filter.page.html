@@ -15,15 +15,15 @@
 
 <ion-card class="bigList">
   <ion-content>
-      <ion-item *ngFor="let doctor of originalData">
+      <ion-item *ngFor="let doctor of modifiedData">
         <ion-card (click)="nextpage()" routerLink="/doc-info">
           <ion-avatar>
-            <img src={{avatar}} />
+            <img src="{{doctor.pic}}" />
           </ion-avatar>
           <ion-card-content>
-            <h1>{{name}}</h1>
-            <h2>{{specialty}}</h2>
-            <p>{{about}}</p>
+            <h1>{{doctor.name}}</h1>
+            <h2>{{doctor.specialty}}</h2>
+            <p>{{doctor.about}}</p>
           </ion-card-content>
         </ion-card>
       </ion-item>
