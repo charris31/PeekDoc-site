@@ -9,12 +9,15 @@
 </ion-header>
 
 <ion-toolbar class="filterBoxes">
-  <ion-searchbar (ionInput)="filterData($event)"></ion-searchbar>
+  <ion-searchbar
+            placeholder='Search'
+            [(ngModel)]="searchTerm"
+            animated></ion-searchbar>
 </ion-toolbar>
 
 <ion-card class="bigList">
   <ion-content>
-      <ion-item *ngFor="let doctor of modifiedData">
+      <ion-item *ngFor="let doctor of doctors | filter:searchTerm">
         <ion-card (click)="nextpage()" routerLink="/doc-info">
           <ion-avatar>
             <img src="{{doctor.pic}}" />
