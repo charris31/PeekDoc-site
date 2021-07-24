@@ -16,8 +16,12 @@
     margin-left: 10px;
 }
   .homeHeader {
-    --background: #9DDAEC;
+    --background: #3C849F;
     height: 105px;
+}
+
+ion-item {
+    --background: none;
 }
 
 ion-card {
@@ -25,11 +29,15 @@ ion-card {
     height: 393px;
     margin-left: 100px;
     margin-top: 75px;
-    background-color: #8DD3CF;
+    background-color: white;
+}
+
+.docCard {
+    display: inline-block;
 }
 
 ion-avatar {
-    width: 136px;
+    width: 136px;   
     height: 136px;
     margin: 0 auto;
     margin-top: 10px;
@@ -43,7 +51,7 @@ ion-searchbar {
     width: 375px;
     font-size: 500px;
     color: black;
-    --background: #d6f2fa;
+    --background: white;
     --icon-color: black;
 }
 
@@ -51,15 +59,7 @@ ion-searchbar {
     --background: none;
 }
 
-.locationInput {
-    transform: scale(1.3);
-    float:right;
-    width: 375px;
-    margin-top: -50px;
-    margin-right: 400px;
-    --background: #d6f2fa;
-    color: black;
-}
+
 
 .needsList {
     width: 225px;
@@ -71,7 +71,7 @@ ion-searchbar {
 
 h1 {
     text-align: center;
-    color: white; 
+    color: black; 
     font-family: sans-serif;
     font-size: 35px;
     margin-top: 10px;
@@ -79,14 +79,14 @@ h1 {
 h2 {
     text-align: center;
     font-size: 25px;
-    color: white; 
+    color: black; 
     font-family: sans-serif;
     margin-top: 15px;
 }
 
 p {
     text-align: center;
-    color: white; 
+    color: black; 
     font-family: sans-serif;
     margin-top: 10px;
     font-size: 15px;  

@@ -16,8 +16,12 @@
     margin-left: 10px;
 }
   .homeHeader {
-    --background: #9DDAEC;
+    --background: #3C849F;
     height: 105px;
+}
+
+ion-item {
+    --background: none;
 }
 
 .suggestBox {
@@ -25,11 +29,11 @@
     margin-left: 150px;
     margin-bottom: 100px;
     height: 840px;
-    --background: rgba(198, 234, 245, 0.527);
+    --background: #EDF1F2;
 }
 
 .docBox {
-    --background: #9cebe6;
+    --background: #EDF1F2;
 }
 
 .bigCard {
@@ -45,7 +49,7 @@
     height: 400px;
     width: 950px;
     margin-left: 45px;
-    --background: #C6EAF5;
+    --background: #EDF1F2;
 }
 
 .moreAbout {
@@ -53,7 +57,7 @@
     width: 450px;
     margin-top: 20;
     margin-left: 45px;
-    --background: #C6EAF5;
+    --background: #EDF1F2;
     font-size: 25px;
 }
 
@@ -63,7 +67,7 @@
     width: 450px;
     float: right;
     margin-right: 322px;
-    --background: #C6EAF5;
+    --background: #EDF1F2;
 }
 
 .bigInfoBox {
@@ -71,7 +75,7 @@
     float: right;
     width: 246px;
     height: 483px;
-    --background: #C6EAF5;
+    --background: #EDF1F2;
 }
 
 .docImg {
@@ -93,6 +97,8 @@
 }
 .sectionToolbar {
     width: 75%;
+    --background: white;
+    color: black;
 }
 .mapImg {
     height: 100%;

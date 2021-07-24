@@ -18,7 +18,7 @@
 }
 
 .homeHeader {
-    --background: #9DDAEC;
+    --background: #3C849F;
     height: 105px;
 }
 
@@ -30,6 +30,7 @@
     line-height: 65px;
     text-align: center;
     top: 25px;
+    color: black;
 }
 
 
@@ -44,6 +45,7 @@ ion-card {
 .bigBox {
     width: 750px;
     height: 650px;
+    background: #CDE9F3;
 }
 
 .inputBoxes {
@@ -52,7 +54,7 @@ ion-card {
 }
 
 ion-input {
-    --background: white;
+    --background: rgba(60, 132, 159, 0.18);
     height: 45px;
 }
 
