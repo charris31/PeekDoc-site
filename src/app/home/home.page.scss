@@ -1,6 +1,6 @@
 .homeHeader {
   --background: url('https://wallpapercave.com/wp/wp2968502.jpg') no-repeat 100% 50%;
-  height: 817px;
+  height: 900px;
 }
 .webTitle {
  font-family: 'Roboto'; color: #2C3D42;
@@ -14,12 +14,12 @@
 
 .headButton {
   float: right;
-  margin-right: 50px;
+  margin-right: 100px;
   font-size: 25px;
   height: 65px;
   margin-top: 20px;
-  margin-left: 10px;
-  background-color: 20%;
+  --background: none;
+  --box-shadow: none;
 }
 .bigButton {
   font-size: 30px;
@@ -27,6 +27,8 @@
   width: 557px;
   margin-left: 17%;
   margin-top: 75px;
+  --background: #3C849F;
+  --color: white;
 
 }
 
@@ -40,7 +42,8 @@ ion-title {
 ion-card {
   width: 45%;
   float: right;
-  margin-top: 1px;
+  margin-top: -110px;
+  margin-right: -10px;
   background: white;
   height: 945px;
   box-shadow: none;
@@ -48,7 +51,8 @@ ion-card {
 }
 
 .homeBigtext {
-  margin-top: 125px;
+  margin-top: 200px;
+  text-align: center;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 50px;
@@ -59,6 +63,8 @@ ion-card {
   // top: 0%;
 }
 .homeSmalltext {
+  margin-top: 500px;
+  text-align: center;
   font-family: sans-serif;
   font-weight: normal;
   font-size: 30px;

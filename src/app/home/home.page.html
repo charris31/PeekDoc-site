@@ -1,23 +1,20 @@
 <ion-header>
   <ion-toolbar class="homeHeader">
-    <ion-button fill="outline" class="headButton" color="primary">Log In</ion-button>
-    <ion-button fill="outline" class="headButton" color="primary">Sign Up</ion-button>
-    <ion-button fill="outline" class="headButton" color="primary">Service</ion-button>
-    <ion-button fill="outline" class="headButton" color="primary">Home</ion-button>
     <ion-title class="webTitle">
       Doc Harmony
     </ion-title>
     <ion-card>
       <ion-card-header>
+        <ion-button class="headButton">Log In</ion-button>
+        <ion-button class="headButton">About Us</ion-button>
+        <ion-button class="headButton">Home</ion-button>
         <ion-card-subtitle class="homeBigtext">Search for medical help with the doctor of your liking.</ion-card-subtitle>
         <ion-card-title class="homeSmalltext">Search for hundreds of doctors around you that specialize in your need. All in one page.</ion-card-title>
-        <ion-button class="bigButton" color=secondary (click)="nextpage()" routerLink="/starter">Begin Looking Now</ion-button>
+        <ion-button class="bigButton" (click)="nextpage()" routerLink="/starter">Begin Looking Now</ion-button>
       </ion-card-header>
-    
-      
     </ion-card>
   </ion-toolbar>
-
+</ion-header>
 <!-- Sub Header for Home Page -->
 <!-- <ion-toolbar class="homeSub">
   <ion-title class="homeBigtext">Search for medical help with the doctor of your liking</ion-title>

@@ -1,21 +1,19 @@
 .webTitle {
-    font-family: 'Roboto Slab'; color: #2C3D42;
     font-size: 71px;
     font-style: normal;
     font-weight: normal;
-    text-shadow: 2px 2px #1EBFEE;
     text-align: left;
     height: 105px;
    }
 
 .headButton {
-  float: right;
-  margin-right: 50px;
-  font-size: 25px;
-  height: 65px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
+    float: right;
+    margin-right: 100px;
+    font-size: 25px;
+    height: 65px;
+    margin-top: 20px;
+    --box-shadow: none;
+  }
 
 .homeHeader {
     --background: #3C849F;
@@ -33,6 +31,12 @@
     color: black;
 }
 
+#inputText {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+
+}
 
 ion-card {
     width: 1000px;
@@ -51,6 +55,8 @@ ion-card {
 .inputBoxes {
  height: 300px;
  font-size: 20px;
+ color: black;
+ --background: black;
 }
 
 ion-input {

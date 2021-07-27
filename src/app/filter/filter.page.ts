@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController} from '@ionic/angular';
+import {NavController, PopoverController} from '@ionic/angular';
+// import { PopoverComponent } from 'src/app/components/popover/popover.component';
 
 @Component({
   selector: 'app-filter',
@@ -11,7 +12,7 @@ export class FilterPage implements OnInit {
   searchTerm: string;
   doctors = [
     {name: 'John Doe', specialty: 'Physician', pic: 'https://bit.ly/3kLZxm9', about: 'I am a good doctor'},
-    {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3iKi7Iy', about: 'I am also a good doctor'},
+    {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3kVdrCx', about: 'I am also a good doctor'},
     {name: 'Andrew Rue', specialty: 'Surgeon/Scientist', pic: 'https://bit.ly/3x7FHEA', about: 'I am the right doctor for you'},
     {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', about: 'I can be a great doctor for you too'}
   ];
@@ -19,7 +20,23 @@ export class FilterPage implements OnInit {
   originalData: any;
   modifiedData: any;
 
-  constructor(public navCtrl: NavController) { 
+  constructor(public navCtrl: NavController, private popCtrl: PopoverController) { 
+
+  }
+
+  ngOnInit() {
+  }
+
+  async _openPopover() {
+    console.log("popover")
+    const popover = await this.popCtrl.create({
+      component: PopoverController
+    })
+    
+    popover.present()
+  }
+}
+
 
   // I made this way too complicated
 
@@ -46,10 +63,3 @@ export class FilterPage implements OnInit {
   // }
 
   // mapData(){
-
-  }
-
-  ngOnInit() {
-  }
-
-}

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="homeHeader">
-    <ion-button fill="outline" class="headButton" color="primary">Log In</ion-button>
-    <ion-button fill="outline" class="headButton" color="primary">Sign Up</ion-button>
+    <ion-button color="dark" fill="clear" class="headButton">Home</ion-button>
+    <ion-button color="dark" fill="clear" class="headButton">Log In</ion-button>
     <ion-title class="webTitle">
       Doc Harmony
     </ion-title>
@@ -16,6 +16,7 @@
 
 <ion-content>
   <ion-card class="bigBox">
+    <ion-card-title id="inputText">Input information so we can help you find doctors</ion-card-title>
     <ion-card-content class=inputBoxes>
       City / Zip / Address
       <ion-input></ion-input>
@@ -27,7 +28,7 @@
       <ion-input></ion-input>
       Race
       <ion-input></ion-input>
-      <ion-button fill="outline" class="inputButton" color="primary" routerLink="/filter">Search</ion-button>
+      <ion-button fill="outline" class="inputButton" routerLink="/filter">Search</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
