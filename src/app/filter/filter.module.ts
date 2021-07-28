@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { FilterPageRoutingModule } from './filter-routing.module';
 
 import { FilterPage } from './filter.page';
-
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PopoverComponent } from '../components/popover/popover.component';
 
 @NgModule({
   imports: [

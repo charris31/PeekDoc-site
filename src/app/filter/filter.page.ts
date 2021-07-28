@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NavController, PopoverController} from '@ionic/angular';
-// import { PopoverComponent } from 'src/app/components/popover/popover.component';
+import { PopoverComponent } from '../components/popover/popover.component';
 
 @Component({
   selector: 'app-filter',
@@ -19,21 +19,24 @@ export class FilterPage implements OnInit {
 
   originalData: any;
   modifiedData: any;
+  filter: any;
 
-  constructor(public navCtrl: NavController, private popCtrl: PopoverController) { 
-
-  }
+  constructor(public navCtrl: NavController, private popCtrl: PopoverController) {}
 
   ngOnInit() {
   }
 
-  async _openPopover() {
-    console.log("popover")
+  async presentPopover(ev: any) {
     const popover = await this.popCtrl.create({
-      component: PopoverController
-    })
-    
-    popover.present()
+      component: PopoverComponent,
+      cssClass: 'my-custom-class',
+      event: ev,
+      translucent: true
+    });
+    await popover.present();
+
+    const { role } = await popover.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
   }
 }
 
