@@ -1,3 +1,52 @@
-<p>
-  popover works!
-</p>
+<ion-list>
+  <ion-item>
+    <ion-label>Specialty</ion-label>
+    <ion-select multiple="true" [(ngModel)]="selected_doctor">
+      <ion-select-option value="dentist">Dentist</ion-select-option>
+      <ion-select-option value="physician">Physician</ion-select-option>
+      <ion-select-option value="surgeon">Surgeon</ion-select-option>
+      <ion-select-option value="psychiatrist">Psychiatrist</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Race/Ethnicity</ion-label>
+    <ion-select multiple="true" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="his/lat">Hispanic/Latinx</ion-select-option>
+      <ion-select-option value="black">Black/African-American</ion-select-option>
+      <ion-select-option value="asian">Asian</ion-select-option>
+      <ion-select-option value="other">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select multiple="true">
+      <ion-select-option value="m">Male</ion-select-option>
+      <ion-select-option value="f">Female</ion-select-option>
+      <ion-select-option value="nb">Other</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Languages</ion-label>
+    <ion-select multiple="true">
+      <ion-select-option value="eng">English</ion-select-option>
+      <ion-select-option value="span">Spanish</ion-select-option>
+      <ion-select-option value="kore">Korean</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Insurance</ion-label>
+    <ion-select multiple="true">
+      <ion-select-option value="kai">Kaiser Permanente</ion-select-option>
+      <ion-select-option value="hn">Health Net</ion-select-option>
+      <ion-select-option value="abc">Anthem Blue Cross</ion-select-option>
+      <ion-select-option value="lach">LA Care Health Plan</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Special Needs</ion-label>
+    <ion-select multiple="true">
+      <ion-select-option value="dia">Diabeties</ion-select-option>
+      <ion-select-option value="asd">ASD (Autism Spectrum)</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>

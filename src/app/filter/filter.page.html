@@ -14,11 +14,58 @@
             [(ngModel)]="searchTerm"
             animated></ion-searchbar>
   
-  <ion-button (click)="_presentPopover()" expand="block" shape="round" id="filterButton">
+  <ion-button (click)="presentPopover()" expand="block" shape="round" id="filterButton">
     Edit
     <ion-icon name="filter-outline"></ion-icon>
   </ion-button>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Specialty</ion-label>
+      <ion-select [(ngModel)]="searchTerm" multiple="true">
+        <ion-select-option *ngFor="let doctor of doctors" value="{{doctor.specialty}}">{{doctor.specialty}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Race/Ethnicity</ion-label>
+      <ion-select [(ngModel)]="doctors" multiple="true">
+        <ion-select-option *ngFor="let doctor of doctors">{{doctor.race}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="doctors" multiple="true">
+        <ion-select-option *ngFor="let doctor of doctors">{{doctor.gender}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Languages</ion-label>
+      <ion-select [(ngModel)]="doctors" multiple="true">
+        <ion-select-option>English</ion-select-option>
+        <ion-select-option>Spanish</ion-select-option>
+        <ion-select-option>Korean</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Insurance</ion-label>
+      <ion-select [(ngModel)]="doctors" multiple="true">
+        <ion-select-option>Any</ion-select-option>
+        <ion-select-option>Kaiser Permanente</ion-select-option>
+        <ion-select-option>Health Net</ion-select-option>
+        <ion-select-option>Anthem Blue Cross</ion-select-option>
+        <ion-select-option>LA Care Health Plan</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Special Needs</ion-label>
+      <ion-select [(ngModel)]="doctors" multiple="true">
+        <ion-select-option>Diabeties</ion-select-option>
+        <ion-select-option>ASD (Autism Spectrum)</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 
+</ion-toolbar>
 <ion-card class="bigList">
   <ion-content>
       <ion-item>
@@ -29,7 +76,10 @@
           <ion-card-content>
             <h1>{{doctor.name}}</h1>
             <h2>{{doctor.specialty}}</h2>
-            <p>{{doctor.about}}</p>
+            <p>{{doctor.race}}</p>
+            <p>{{doctor.gender}}</p>
+            <p>{{doctor.language}}</p>
+            <p>{{doctor.insurance}}</p>
           </ion-card-content>
         </ion-card>
       </ion-item>

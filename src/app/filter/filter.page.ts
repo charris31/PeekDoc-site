@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController, PopoverController} from '@ionic/angular';
+import {NavController, PopoverController, ModalController} from '@ionic/angular';
 import { PopoverComponent } from '../components/popover/popover.component';
+
 
 @Component({
   selector: 'app-filter',
@@ -10,11 +11,12 @@ import { PopoverComponent } from '../components/popover/popover.component';
 export class FilterPage implements OnInit {
 
   searchTerm: string;
+  selected_option: string;
   doctors = [
-    {name: 'John Doe', specialty: 'Physician', pic: 'https://bit.ly/3kLZxm9', about: 'I am a good doctor'},
-    {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3kVdrCx', about: 'I am also a good doctor'},
-    {name: 'Andrew Rue', specialty: 'Surgeon/Scientist', pic: 'https://bit.ly/3x7FHEA', about: 'I am the right doctor for you'},
-    {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', about: 'I can be a great doctor for you too'}
+    {name: 'John Doe', specialty: 'Physician', pic: 'https://bit.ly/3kLZxm9', race: 'Black/African American', gender: 'Male', language: 'English', insurance: 'Any'},
+    {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3kVdrCx', race: 'Korean', gender: 'Female', language: 'English, Korean', insurance: 'Any'},
+    {name: 'Andrew Rue', specialty: 'Surgeon/Scientist', pic: 'https://bit.ly/3x7FHEA', race: 'Middle Eastern', gender: 'Male', language: 'English', insurance: 'Any'},
+    {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', race: 'Latina', gender: 'Female', language: 'English, Spanish', insurance: 'Any'}
   ];
 
   originalData: any;
@@ -22,6 +24,11 @@ export class FilterPage implements OnInit {
   filter: any;
 
   constructor(public navCtrl: NavController, private popCtrl: PopoverController) {}
+
+  filterData(){
+
+
+  }
 
   ngOnInit() {
   }
