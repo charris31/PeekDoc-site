@@ -19,11 +19,11 @@
     <ion-icon name="filter-outline"></ion-icon>
   </ion-button>
   
-  <ion-list>
+  <!-- <ion-list>
     <ion-item>
       <ion-label>Specialty</ion-label>
       <ion-select [(ngModel)]="searchTerm" multiple="true">
-        <ion-select-option *ngFor="let doctor of doctors" value="{{doctor.specialty}}">{{doctor.specialty}}</ion-select-option>
+        <ion-select-option *ngFor="let doctor of doctors" ionChange="onChange(doctor.specialty)" value="{{doctor.specialty}}">{{doctor.specialty}}</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
@@ -63,12 +63,34 @@
         <ion-select-option>ASD (Autism Spectrum)</ion-select-option>
       </ion-select>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 
 </ion-toolbar>
-<ion-card class="bigList">
+
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let doctor of doctors | filter:searchTerm" size= "3">
+      <ion-card [routerLink]="['/doc-info']">
+      <ion-avatar>
+        <img src={{doctor.pic}} />
+      </ion-avatar>
+      <ion-card-content>
+        <h1>{{doctor.name}}</h1>
+        <h2>Field: {{doctor.specialty}}</h2>
+        <p>Race/Ethnicity: {{doctor.race}}</p>
+        <p>Gender: {{doctor.gender}}</p>
+        <p>Lanuage(s):{{doctor.language}}</p>
+        <p>Insurance:{{doctor.insurance}}</p>
+      </ion-card-content>
+    </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- <ion-card class="bigList">
   <ion-content>
       <ion-item>
+        <ion-button>Test</ion-button>
         <ion-card class="docCard" (click)="nextpage()" routerLink="/doc-info" *ngFor="let doctor of doctors | filter:searchTerm">
           <ion-avatar>
             <img src="{{doctor.pic}}" />
@@ -82,7 +104,7 @@
             <p>{{doctor.insurance}}</p>
           </ion-card-content>
         </ion-card>
-      </ion-item>
+      </ion-item> -->
 
     <!-- <ion-card (click)="nextpage()" routerLink="/doc-info">
       <ion-avatar>
@@ -94,5 +116,5 @@
         <p>I am a good doctor for you!</p>
       </ion-card-content>
     </ion-card> -->
-  </ion-content>
-</ion-card>
+  <!-- </ion-content>
+</ion-card> -->

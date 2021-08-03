@@ -5,14 +5,15 @@
     <ion-title class="webTitle">
       Doc Harmony
     </ion-title>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="bigText">Help us find what you need so you can navigate to your doctors in the easiest way possible.</ion-card-title>
+      </ion-card-header>
+    </ion-card>
   </ion-toolbar>
 </ion-header>
 
-<ion-card>
-  <ion-card-header>
-    <ion-card-title class="bigText">Help us find what you need so you can navigate to your doctors in the easiest way possible.</ion-card-title>
-  </ion-card-header>
-</ion-card>
+
 
 <ion-content>
   <ion-card class="bigBox">
@@ -28,7 +29,7 @@
       <ion-input></ion-input>
       Race
       <ion-input></ion-input>
-      <ion-button fill="outline" class="inputButton" routerLink="/filter">Search</ion-button>
+      <ion-button fill="outline" class="inputButton" [routerLink]="['/filter']">Search</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

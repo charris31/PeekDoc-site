@@ -16,8 +16,8 @@
   }
 
 .homeHeader {
-    --background: #3C849F;
-    height: 105px;
+    --background: url('https://bit.ly/3yojfZa') no-repeat 100% fixed;
+    height: 500px;
 }
 
 .bigText {
@@ -50,6 +50,7 @@ ion-card {
     width: 750px;
     height: 650px;
     background: #CDE9F3;
+    margin-top: 100px;
 }
 
 .inputBoxes {

@@ -19,15 +19,16 @@ export class FilterPage implements OnInit {
     {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', race: 'Latina', gender: 'Female', language: 'English, Spanish', insurance: 'Any'}
   ];
 
+
   originalData: any;
   modifiedData: any;
   filter: any;
 
   constructor(public navCtrl: NavController, private popCtrl: PopoverController) {}
 
-  filterData(){
-
-
+  onChange(specialty) {
+  this.searchTerm = specialty;
+  console.log(this.searchTerm)    
   }
 
   ngOnInit() {
