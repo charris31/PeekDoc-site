@@ -11,13 +11,13 @@
 <ion-item>
   <ion-card class="suggestBox">
     <ion-card-header>
-      <ion-card-title class="suggestTitle">Suggestions</ion-card-title>
+      <ion-card-title id="suggestTitle">Suggestions</ion-card-title>
     </ion-card-header>
     <ion-card class="docBox">
       <ion-avatar class="suggestBoxImg">
         <img src="https://bit.ly/36qMUof">
       </ion-avatar>
-      <ion-card-content>
+      <ion-card-content id="sugText">
         <h1>Jane Doe</h1>
         <h2>Some kind of info about Jane Doe</h2>
       </ion-card-content>
@@ -26,60 +26,75 @@
   </ion-card>
 
   <ion-card class="bigCard">
-    <ion-card-header>
-      <ion-card-title class="sectionHeader">Doctor Location and Business</ion-card-title>
-    </ion-card-header>
+
+    <ion-label class="sectionHeader">Rating and Review</ion-label>
+    <ion-label class="sectionHeader" id="contactHeader">Contacts</ion-label>
+
+    <div id="topCards">
+      <ion-card class="ratingBox">
+        <ion-card-content id="rating">
+          <ion-card-subtitle>Phone: {{doctor.phoneNumber}}</ion-card-subtitle>
+          <ion-card-subtitle>Webpage: {{doctor.webPage}}</ion-card-subtitle>
+          <ion-card-subtitle>LinkedIn: {{doctor.media}}</ion-card-subtitle>
+          <ion-card-subtitle>Twitter: {{doctor.media}}</ion-card-subtitle>
+          <ion-card-subtitle>Facebook: {{doctor.media}}</ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="moreAbout">
+        <ion-card-content>
+          <img src="https://bit.ly/36M710c">
+      </ion-card-content>
+      </ion-card>
+    </div>
+    
+    <ion-label class="sectionHeader" id="locHeader">Doctor Location and Business</ion-label>
     <ion-card class="infoDirection">
       <ion-card-content>
         <ion-label class="cardText">Office Location: {{business.location}}</ion-label>
       </ion-card-content>
-      <ion-card-content>
+      
+      <ion-card-content id="hours">
         <ion-label class="cardText">Hours:</ion-label>
+        <ion-label class=hourText>Mon - Wed
+          <ion-label>9am - 6pm</ion-label>
+        </ion-label>  
+        <ion-label>Thur - Fri</ion-label>
+          <ion-label>10am - 7pm</ion-label>
+        <ion-label>Sat</ion-label>
+          <ion-label>11am - 5pm</ion-label>
+        <ion-label>Sun</ion-label>
+          <ion-label>Closed</ion-label>
       </ion-card-content>
-      <ion-card-content>
+      <ion-card-content id="map">
         <div #map id="map"></div>
       </ion-card-content>
 
     </ion-card>
 
     <ion-toolbar class="sectionToolbar">
-      <ion-label class="sectionHeader">Contact and More Info</ion-label>
-      <ion-label class="sectionHeader" id="contactHeader">Ratings and Feedback</ion-label>
+
     </ion-toolbar>
 
 
-    <ion-card class="moreAbout">
-      <ion-label>Phone: {{doctor.phoneNumber}}</ion-label>
-      <ion-label>Webpage: {{doctor.webPage}}</ion-label>
-      <ion-label>LinkedIn: {{doctor.media}}</ion-label>
-      <ion-label>Twitter: {{doctor.media}}</ion-label>
-      <ion-label>Facebook: {{doctor.media}}</ion-label>
-    </ion-card>
 
-    <ion-card class="ratingBox">
-      <ion-card-content class="rating">
-        <img src="https://bit.ly/36M710c">
-      </ion-card-content>
 
-    </ion-card>
-
-    <ion-avatar class="docImg">
-      <img src="https://bit.ly/3kLZxm9">
-    </ion-avatar>
+    
     <ion-card-header>
       <ion-card-title></ion-card-title>
     </ion-card-header>
     <ion-card class="bigInfoBox">
-      <ion-card-title>Info</ion-card-title>
-      <ion-card-content class="infoText">
-        <ion-label>Name: {{doctor.name}}</ion-label>
-        <ion-label>Gender: {{doctor.gender}}</ion-label>
-        <ion-label>Age: {{doctor.age}}</ion-label>
-        <ion-label>Race: {{doctor.race}}</ion-label>
-        <ion-label>Birth Place: {{doctor.birth}}</ion-label>
-        <ion-label>Studied: {{doctor.school}}</ion-label>
-        <ion-label>Specialties: {{doctor.specialties}}</ion-label>
-        <ion-label>Hobbies: {{doctor.hobbies}}</ion-label>
+      <ion-avatar class="docImg">
+        <img src="https://bit.ly/3kLZxm9">
+      </ion-avatar>
+      <ion-card-content id="infoCard">
+        <ion-card-subtitle class="infoText">Name: {{doctor.name}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Gender: {{doctor.gender}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Age: {{doctor.age}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Race: {{doctor.race}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Birth Place: {{doctor.birth}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Studied: {{doctor.school}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Specialties: {{doctor.specialties}}</ion-card-subtitle>
+        <ion-card-subtitle class="infoText">Hobbies: {{doctor.hobbies}}</ion-card-subtitle>
       </ion-card-content>
     </ion-card>
   </ion-card>

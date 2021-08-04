@@ -11,6 +11,7 @@ declare var google: any;
 export class DocInfoPage implements OnInit {
   doctor = {
     name: 'John Doe',
+    pic: 'https://bit.ly/3kLZxm9',
     gender: 'Male',
     race: 'African American',
     birth: 'Los Angeles, CA',
