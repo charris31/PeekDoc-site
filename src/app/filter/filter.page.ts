@@ -28,9 +28,9 @@ export class FilterPage implements OnInit {
   selected_option: string;
   doctors = [
     {name: 'John Doe', specialty: 'Physician', pic: 'https://bit.ly/3kLZxm9', race: 'Black/African American', gender: 'Male', language: 'English', insurance: 'Any'},
-    {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3kVdrCx', race: 'Korean', gender: 'Female', language: 'English, Korean', insurance: 'Any'},
+    {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3kVdrCx', race: 'Asian', gender: 'Female', language: 'English, Korean', insurance: 'Any'},
     {name: 'Andrew Rue', specialty: 'Surgeon', pic: 'https://bit.ly/3x7FHEA', race: 'Middle Eastern', gender: 'Male', language: 'English', insurance: 'Any'},
-    {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', race: 'Latina', gender: 'Female', language: 'English, Spanish', insurance: 'Any'}
+    {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', race: 'Latin', gender: 'Female', language: 'English, Spanish', insurance: 'Any'}
   ];
 
 
@@ -70,7 +70,7 @@ export class FilterPage implements OnInit {
     console.log(this.filterArr);
 
     let res = this.doctors.filter( (doctor)=> {
-      return this.filterArr.indexOf(doctor.specialty) >=0;  
+      return (this.filterArr.indexOf(doctor.specialty) >=0) && (this.filterArr.indexOf(doctor.race) >=0);  
     })
     this.doctors = res;
   }

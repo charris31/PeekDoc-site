@@ -57,7 +57,8 @@ ion-item {
 }
 
 .moreAbout {
-    height: 18%;
+    height: 100%;
+    width: 40%;
     // width: 40%;
     --background: #EDF1F2;
     font-size: 25px;
@@ -66,7 +67,7 @@ ion-item {
 
 .ratingBox {
 
-    height: 400%;
+    height: 100%;
     width: 30%;
     float: right;
     margin-right: 322px;
@@ -83,7 +84,7 @@ ion-item {
 }
 
 .docImg {
-    transform: scale(4);
+    transform: scale(3.5);
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
@@ -121,13 +122,13 @@ ion-item {
 
 .infoText {
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 13%;
     color: black;
     font-weight: bold;
     
 }
 
-#rating {
+.rating {
     color: black;
     font-weight: bold;
     font-size: 20px;
@@ -147,6 +148,7 @@ ion-item {
 #topCards {
     display: inline-block;
     margin-left: 30px;
+    height: 30%;
 }
 
 #hours {
