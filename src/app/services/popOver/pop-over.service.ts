@@ -18,4 +18,7 @@ export class PopOverService {
     return this.filterArr;
   }
 
+  onDismiss(){
+    
+  }
 }

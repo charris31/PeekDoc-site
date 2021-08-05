@@ -39,6 +39,7 @@ export class PopoverComponent implements OnInit {
     this.service.addtoFilterArr(event.detail.value)
   }
 
+  
 
 
   ngOnInit() {}

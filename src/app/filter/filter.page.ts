@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController, PopoverController, ModalController} from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router'
+import { NavController, PopoverController, ModalController } from '@ionic/angular';
 import { PopoverComponent } from '../components/popover/popover.component';
 import { PopOverService } from '../services/popOver/pop-over.service';
 
@@ -11,12 +12,24 @@ import { PopOverService } from '../services/popOver/pop-over.service';
 })
 export class FilterPage implements OnInit {
 
+  // This is for the specialties 
+  isPhysician: boolean = false;
+  isDentist: boolean = false;
+  isSurgeon: boolean = false;
+  isPsychiatrist: boolean = false;
+
+  // This is for the query parameter
+  private query: ActivatedRoute;
+
+  // This is for the filtered list
+  newFilter = []
+
   searchTerm: string;
   selected_option: string;
   doctors = [
     {name: 'John Doe', specialty: 'Physician', pic: 'https://bit.ly/3kLZxm9', race: 'Black/African American', gender: 'Male', language: 'English', insurance: 'Any'},
     {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3kVdrCx', race: 'Korean', gender: 'Female', language: 'English, Korean', insurance: 'Any'},
-    {name: 'Andrew Rue', specialty: 'Surgeon/Scientist', pic: 'https://bit.ly/3x7FHEA', race: 'Middle Eastern', gender: 'Male', language: 'English', insurance: 'Any'},
+    {name: 'Andrew Rue', specialty: 'Surgeon', pic: 'https://bit.ly/3x7FHEA', race: 'Middle Eastern', gender: 'Male', language: 'English', insurance: 'Any'},
     {name: 'Sofia Garcia', specialty: 'Psychiatrist', pic: 'https://bit.ly/3ePLTue', race: 'Latina', gender: 'Female', language: 'English, Spanish', insurance: 'Any'}
   ];
 
@@ -24,9 +37,12 @@ export class FilterPage implements OnInit {
   originalData: any;
   modifiedData: any;
   filter: any;
-  filterArr: string[];
+  filterArr = [];
 
-  constructor(public navCtrl: NavController, private popCtrl: PopoverController, private service: PopOverService) {}
+  constructor(public navCtrl: NavController, private popCtrl: PopoverController, private service: PopOverService, private activatedRoute: ActivatedRoute) {
+
+  
+  }
 
 
 
@@ -49,40 +65,36 @@ export class FilterPage implements OnInit {
     await this.getFilter();
     console.log('onDidDismiss resolved with role', role);
   }
-  getFilter(){
-    this.filterArr = this.service.getFilterArr();
+  async getFilter(){
+    this.filterArr = await this.service.getFilterArr();
     console.log(this.filterArr);
 
-    let res = this.doctors.filter(async function (doctor) {
-      console.log(this.filterArr);
-      
+    let res = this.doctors.filter( (doctor)=> {
+      return this.filterArr.indexOf(doctor.specialty) >=0;  
     })
+    this.doctors = res;
   }
+
+  //This is for the buttons
+  physicianToggle(){
+    if(this.isPhysician){
+      this.isPhysician = true;
+      console.log(this.isPhysician)
+    }
+    else{
+      this.isPhysician = false;
+      console.log(this.isPhysician)
+    }
+
+  }
+  dentistToggle(){
+    this.isDentist = true;
+  }
+  surgeonToggle(){
+    this.isSurgeon = true;
+  }
+  psychiatristToggle(){
+    this.isPsychiatrist = true;
+  }
+  
 }
-
-
-  // I made this way too complicated
-
-  //   this.originalData = [
-  //     {name: 'John Doe', specialty: 'Physician', pic: 'https://bit.ly/36qMUof', about: 'I am a good doctor'},
-  //     {name: 'Jane Doe', specialty: 'Dentist', pic: 'https://bit.ly/3zokxmU', about: 'I am also a good doctor'},
-  //     {name: 'Silas Stone', specialty: 'Surgeon/Scientist', pic: 'https://bit.ly/3iulbsi', about: 'I work at S.T.A.R. Labs'},
-  //     {name: 'Harleen Quinzel', specialty: 'Psychiatrist', pic: 'https://bit.ly/3eIhk9S', about: 'There is always a wild side to an innocent face'}
-  //   ];
-
-  //   this.modifiedData = JSON.parse(JSON.stringify(this.originalData));
-  // }
-
-  // resetData(){
-  //   this.modifiedData = JSON.parse(JSON.stringify(this.originalData));
-  // }
-
-  // filterData(){
-
-  //   this.modifiedData = this.modifiedData.filter((doctor) => {
-  //     return doctor.specialty = 'Physician';
-  //   });
-
-  // }
-
-  // mapData(){
