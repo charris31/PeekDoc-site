@@ -70,7 +70,7 @@ export class FilterPage implements OnInit {
     console.log(this.filterArr);
 
     let res = this.doctors.filter( (doctor)=> {
-      return (this.filterArr.indexOf(doctor.specialty) >=0) && (this.filterArr.indexOf(doctor.race) >=0);  
+      return (this.filterArr.indexOf(doctor.specialty) >=0);  
     })
     this.doctors = res;
   }
