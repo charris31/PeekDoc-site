@@ -21,8 +21,28 @@
         <h1>Jane Doe</h1>
         <h2>Some kind of info about Jane Doe</h2>
       </ion-card-content>
-
     </ion-card>
+
+    <ion-card class="docBox">
+      <ion-avatar class="suggestBoxImg">
+        <img src="https://bit.ly/3x7FHEA">
+      </ion-avatar>
+      <ion-card-content id="sugText">
+        <h1>Andrew Rue</h1>
+        <h2>Some kind of info about Andrew Rue</h2>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="docBox">
+      <ion-avatar class="suggestBoxImg">
+        <img src="https://bit.ly/3ePLTue">
+      </ion-avatar>
+      <ion-card-content id="sugText">
+        <h1>Sofia Garcia</h1>
+        <h2>Some kind of info about Sofia Garcia</h2>
+      </ion-card-content>
+    </ion-card>
+
   </ion-card>
 
   <ion-card class="bigCard">
@@ -33,38 +53,40 @@
     <div id="topCards">
       <ion-card class="ratingBox">
         <ion-card-content class="rating">
-          <ion-card-subtitle>Phone: {{doctor.phoneNumber}}</ion-card-subtitle>
-          <ion-card-subtitle>Webpage: {{doctor.webPage}}</ion-card-subtitle>
-          <ion-card-subtitle>LinkedIn: {{doctor.media}}</ion-card-subtitle>
-          <ion-card-subtitle>Twitter: {{doctor.media}}</ion-card-subtitle>
-          <ion-card-subtitle>Facebook: {{doctor.media}}</ion-card-subtitle>
+          <h1><b>Phone:</b> {{doctor.phoneNumber}}</h1>
+          <h1><b>Webpage:</b> {{doctor.webPage}}</h1>
+          <h1><b>LinkedIn:</b> {{doctor.media}}</h1>
+          <h1><b>Twitter:</b> {{doctor.media}}</h1>
+          <h1><b>Facebook:</b> {{doctor.media}}</h1>
         </ion-card-content>
       </ion-card>
       <ion-card class="moreAbout">
-        <ion-card-content>
+        <!-- <ion-card-content id="ratingImg">
           <img src="https://bit.ly/36M710c">
-      </ion-card-content>
+        </ion-card-content> -->
+        <ion-textarea placeholder="Review..."></ion-textarea>
       </ion-card>
     </div>
     
     <ion-label class="sectionHeader" id="locHeader">Doctor Location and Business</ion-label>
     <ion-card class="infoDirection">
       <ion-card-content>
-        <ion-label class="cardText">Office Location: {{business.location}}</ion-label>
+        <ion-label class="cardText">Office Location:</ion-label>
+        <h1> {{business.location}}</h1>
       </ion-card-content>
       
       <ion-card-content id="hours">
         <ion-label class="cardText">Hours:</ion-label>
-        <ion-label class=hourText>Mon - Wed
-          <ion-label>9am - 6pm</ion-label>
-        </ion-label>  
-        <ion-label>Thur - Fri</ion-label>
-          <ion-label>10am - 7pm</ion-label>
-        <ion-label>Sat</ion-label>
-          <ion-label>11am - 5pm</ion-label>
-        <ion-label>Sun</ion-label>
-          <ion-label>Closed</ion-label>
+        <h1>Mon - Wed</h1>
+        <h1>Thur - Fri</h1>
+        <h1>Sat</h1>
+        <h1>Sun</h1>
+        <h1 class="hourText">9am - 6pm</h1>
+        <h1 class="hourText">10am - 7pm</h1>
+        <h1 class="hourText">11am - 5pm</h1>
+        <h1 class="hourText">Closed</h1>
       </ion-card-content>
+      
       <ion-card-content id="map">
         <div #map id="map"></div>
       </ion-card-content>
@@ -87,14 +109,14 @@
         <img src="https://bit.ly/3kLZxm9">
       </ion-avatar>
       <ion-card-content id="infoCard">
-        <ion-card-subtitle class="infoText">Name: {{doctor.name}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Gender: {{doctor.gender}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Age: {{doctor.age}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Race: {{doctor.race}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Birth Place: {{doctor.birth}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Studied: {{doctor.school}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Specialties: {{doctor.specialties}}</ion-card-subtitle>
-        <ion-card-subtitle class="infoText">Hobbies: {{doctor.hobbies}}</ion-card-subtitle>
+        <h1 class="infoText"><b>Name:</b> {{doctor.name}}</h1>
+        <h1 class="infoText"><b>Gender:</b> {{doctor.gender}}</h1>
+        <h1 class="infoText"><b>Age:</b> {{doctor.age}}</h1>
+        <h1 class="infoText"><b>Race:</b> {{doctor.race}}</h1>
+        <h1 class="infoText"><b>Birth Place:</b> {{doctor.birth}}</h1>
+        <h1 class="infoText"><b>Studied:</b> {{doctor.school}}</h1>
+        <h1 class="infoText"><b>Specialties:</b> {{doctor.specialties}}</h1>
+        <h1 class="infoText"><b>Hobbies:</b> {{doctor.hobbies}}</h1>
       </ion-card-content>
     </ion-card>
   </ion-card>

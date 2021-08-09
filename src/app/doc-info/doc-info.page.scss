@@ -84,10 +84,11 @@ ion-item {
 }
 
 .docImg {
-    transform: scale(3.5);
+    transform: scale(3);
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+    box-shadow: 1px 1px 4px;
 }
 
 .sectionHeader {
@@ -108,7 +109,7 @@ ion-item {
 }
 
 #infoCard {
-    margin-top: 50px;
+    margin-top: 25%;
 }
 .sectionToolbar {
     width: 75%;
@@ -121,10 +122,8 @@ ion-item {
 }
 
 .infoText {
-    font-size: 15px;
-    margin-top: 13%;
+    margin-top: 7%;
     color: black;
-    font-weight: bold;
     
 }
 
@@ -149,6 +148,7 @@ ion-item {
     display: inline-block;
     margin-left: 30px;
     height: 30%;
+    width: 90%;
 }
 
 #hours {
@@ -157,7 +157,7 @@ ion-item {
 }
 
 .hourText{
-    float: left;
+    
 }
 
 #suggestTitle {
@@ -165,3 +165,12 @@ ion-item {
     font-weight: bold;
     text-align: center;
 }
+
+ion-textarea {
+    --padding-bottom: 100%;
+    --background: white;
+}
+// #suggestBoxImg {
+//     height: 30px;
+//     width: 30px;
+// }

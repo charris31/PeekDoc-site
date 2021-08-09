@@ -36,7 +36,7 @@
                 </ion-item>
               </ion-list> -->
 
-  <ion-button (click)="presentPopover()" expand="block" shape="round" id="filterButton">
+  <ion-button (click)="presentPopover()" expand="block" shape="round" fill="clear" id="filterButton">
     Edit
     <ion-icon name="filter-outline"></ion-icon>
   </ion-button>
@@ -98,11 +98,13 @@
       </ion-avatar>
       <ion-card-content>
         <h1>{{doctor.name}}</h1>
-        <h2>Field: {{doctor.specialty}}</h2>
-        <p>Race/Ethnicity: {{doctor.race}}</p>
-        <p>Gender: {{doctor.gender}}</p>
-        <p>Lanuage(s):{{doctor.language}}</p>
-        <p>Insurance:{{doctor.insurance}}</p>
+      </ion-card-content>
+      <ion-card-content id="docInfo">
+        <p><b>Field:</b> {{doctor.specialty}}</p>
+        <p><b>Race/Ethnicity:</b> {{doctor.race}}</p>
+        <p><b>Gender:</b> {{doctor.gender}}</p>
+        <p><b>Lanuage(s):</b> {{doctor.language}}</p>
+        <p><b>Insurance:</b> {{doctor.insurance}}</p>
       </ion-card-content>
     </ion-card>
     </ion-col>

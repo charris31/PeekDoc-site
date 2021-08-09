@@ -23,10 +23,11 @@
 // }
 
 ion-card {
-    width: 75%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     margin-top: 15%;
     background-color: white;
+    border-radius: 3%;
 }
 
 ion-grid {
@@ -38,8 +39,8 @@ ion-grid {
 }
 
 ion-avatar {
-    width: 136px;   
-    height: 136px;
+    width: 175px;   
+    height: 175px;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -51,14 +52,15 @@ ion-card-content {
 
 h1 {
     text-align: center;
-}
-
-h2{
-    margin-left: 45px;
     font-weight: bold;
 }
+
+#docInfo {
+    margin-top: 2%;
+}
 p {
-    margin-left: 45px;
+    margin-left: 7%;
+    font-size: 150%;
 }
 
 ion-searchbar {
@@ -86,6 +88,9 @@ ion-searchbar {
     width: 10%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
+    --color: black;
+    transform: scale(1.4);
 }
 
 

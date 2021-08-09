@@ -25,12 +25,15 @@
 }
 .bigButton {
   font-size: 150%;
-  height: 60px;
+  height: 75px;
   width: 70%;
   margin-left: 14%;
   margin-top: 12%;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   --background: #3C849F;
   --color: white;
+  --border-radius: 10px;
 
 }
 
@@ -49,7 +52,7 @@ ion-card {
   background: white;
   height: 945px;
   box-shadow: none;
-  
+  border-radius: 5%;
 }
 
 .homeBigtext {
