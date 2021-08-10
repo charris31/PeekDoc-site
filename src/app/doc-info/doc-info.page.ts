@@ -13,6 +13,7 @@ export class DocInfoPage implements OnInit {
     name: 'John Doe',
     pic: 'https://bit.ly/3kLZxm9',
     gender: 'Male',
+    age:'38',
     race: 'African American',
     birth: 'Los Angeles, CA',
     school: 'Charles Drew University',
