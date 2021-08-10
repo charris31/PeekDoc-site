@@ -46,10 +46,10 @@
   </ion-card>
 
   <ion-card class="bigCard">
-
-    <ion-label class="sectionHeader">Rating and Review</ion-label>
-    <ion-label class="sectionHeader" id="contactHeader">Contacts</ion-label>
-
+    <div id="topText">
+      <ion-title class="sectionHeader">Rating and Review</ion-title>
+      <ion-title class="sectionHeader" id="contactHeader">Contacts</ion-title>
+    </div>
     <div id="topCards">
       <ion-card class="ratingBox">
         <ion-card-content class="rating">
@@ -61,30 +61,28 @@
         </ion-card-content>
       </ion-card>
       <ion-card class="moreAbout">
+      <ion-card-content>
         <!-- <ion-card-content id="ratingImg">
           <img src="https://bit.ly/36M710c">
         </ion-card-content> -->
-        <ion-textarea placeholder="Review..."></ion-textarea>
+        <ion-textarea placeholder="Leave A Review..."></ion-textarea>
+      </ion-card-content>
       </ion-card>
     </div>
     
-    <ion-label class="sectionHeader" id="locHeader">Doctor Location and Business</ion-label>
+    <ion-title class="sectionHeader" id="locHeader">Doctor Location and Business</ion-title>
     <ion-card class="infoDirection">
       <ion-card-content>
-        <ion-label class="cardText">Office Location:</ion-label>
+        <ion-title class="cardText">Office Location:</ion-title>
         <h1> {{business.location}}</h1>
       </ion-card-content>
       
       <ion-card-content id="hours">
-        <ion-label class="cardText">Hours:</ion-label>
-        <h1>Mon - Wed</h1>
-        <h1>Thur - Fri</h1>
-        <h1>Sat</h1>
-        <h1>Sun</h1>
-        <h1 class="hourText">9am - 6pm</h1>
-        <h1 class="hourText">10am - 7pm</h1>
-        <h1 class="hourText">11am - 5pm</h1>
-        <h1 class="hourText">Closed</h1>
+        <ion-title class="cardText">Hours:</ion-title>
+        <h1>Mon - Wed  |  9am - 6pm</h1>
+        <h1>Thur - Fri | 10am - 7pm</h1>
+        <h1>Sat | 11am - 5pm</h1>
+        <h1>Sun | Closed</h1>
       </ion-card-content>
       
       <ion-card-content id="map">

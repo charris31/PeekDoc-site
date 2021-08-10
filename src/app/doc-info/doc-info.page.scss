@@ -105,7 +105,7 @@ ion-item {
     margin-left: 210px;
 }
 #locHeader {
-    margin-top: -20px;
+    margin-top: -5px;
 }
 
 #infoCard {
@@ -151,6 +151,11 @@ ion-item {
     width: 90%;
 }
 
+#topText{
+    display: inline-block;
+    margin-left: 30px;
+}
+
 #hours {
     display: inline-block;
     font-size: 20px;
@@ -167,8 +172,16 @@ ion-item {
 }
 
 ion-textarea {
-    --padding-bottom: 100%;
+    // --padding-bottom: 100%;
     --background: white;
+    margin-top: 40%;
+    height: 20%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+ion-title {
+    
 }
 // #suggestBoxImg {
 //     height: 30px;
