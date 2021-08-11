@@ -18,11 +18,21 @@
     --background: none;
     --box-shadow: none;
   }
+#bgImg{
+    --background: black;
+    height: 353px;
+}
 
 .homeHeader {
-    --background: url('https://cdn.todaymediainc.com/wp-content/uploads/sites/4/2021/07/nurse-shutterstock_1642992973.jpg') no-repeat center/cover fixed    ;
+    --background: url('https://cdn.todaymediainc.com/wp-content/uploads/sites/4/2021/07/nurse-shutterstock_1642992973.jpg') no-repeat center/cover fixed;
     height: 120%;
 }
+
+// #toolbar {
+//     height: 352px;
+//     background-color: black;
+//     backgro
+// }
 
 .bigText {
     height: 197px;
@@ -39,9 +49,18 @@
 
 #inputText {
     text-align: center;
+    width: 60%;
     color: black;
-    font-size: 200%;
+    font-size: 210%;
+    margin-left: 20%;
+    margin-top: 2%;
+    font-weight: bold;
+}
 
+div {
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 ion-card {
@@ -57,6 +76,7 @@ ion-card {
     height: 650px;
     background: #CDE9F3;
     margin-top: 100px;
+    border-radius: 2%;
 }
 
 .inputBoxes {
@@ -66,6 +86,7 @@ ion-card {
  font-weight: bold;
  color: black;
  --background: black;
+ margin-left: 4%;
 }
 
 ion-input {

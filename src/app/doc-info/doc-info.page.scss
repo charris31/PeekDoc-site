@@ -150,7 +150,7 @@ ion-item {
 
 #sugText{
     color: black;
-    font-weight: bold;
+    margin-left: 30%;
 }
 
 #topCards {
@@ -170,9 +170,9 @@ ion-item {
     font-size: 20px;
 }
 
-.hourText{
+// .hourText{
     
-}
+// }
 
 #suggestTitle {
     color: black;
@@ -186,8 +186,7 @@ ion-item {
     font-size: 25px;
 }
 
-ion-textarea {
-    // --padding-bottom: 100%;
+ion-input {
     --background: white;
     margin-top: 40%;
     height: 10%;
@@ -195,11 +194,11 @@ ion-textarea {
     font-size: 15px;
 }
 
-ion-title {
+// ion-title {
     
-}
+// }
 .suggestBoxImg {
-    float:right;
+    float: left;
     margin-top: 5%;
     transform: scale(1.3);
 }
