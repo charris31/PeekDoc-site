@@ -14,32 +14,38 @@
       <ion-card-title id="suggestTitle">Suggestions</ion-card-title>
     </ion-card-header>
     <ion-card class="docBox">
-      <ion-avatar class="suggestBoxImg">
-        <img src="https://bit.ly/3kVdrCx">
-      </ion-avatar>
       <ion-card-content id="sugText">
+        <ion-avatar class="suggestBoxImg">
+          <img src="https://bit.ly/3kVdrCx">
+        </ion-avatar>
         <h1>Jane Doe</h1>
-        <h2>Some kind of info about Jane Doe</h2>
+        <h2>Asian \ Korean</h2>
+        <h2>Dentist</h2>
+        <h2>Any Insurance</h2>
       </ion-card-content>
     </ion-card>
 
     <ion-card class="docBox">
-      <ion-avatar class="suggestBoxImg">
-        <img src="https://bit.ly/3x7FHEA">
-      </ion-avatar>
       <ion-card-content id="sugText">
+        <ion-avatar class="suggestBoxImg">
+          <img src="https://bit.ly/3x7FHEA">
+        </ion-avatar> 
         <h1>Andrew Rue</h1>
-        <h2>Some kind of info about Andrew Rue</h2>
+        <h2>Arabic \ Middle Eastern</h2>
+        <h2>Surgeon</h2>
+        <h2>Any Insurance</h2>
       </ion-card-content>
     </ion-card>
 
     <ion-card class="docBox">
-      <ion-avatar class="suggestBoxImg">
-        <img src="https://bit.ly/3ePLTue">
-      </ion-avatar>
       <ion-card-content id="sugText">
+        <ion-avatar class="suggestBoxImg">
+          <img src="https://bit.ly/3ePLTue">
+        </ion-avatar>
         <h1>Sofia Garcia</h1>
-        <h2>Some kind of info about Sofia Garcia</h2>
+        <h2>Latin \ Puerto Rican</h2>
+        <h2>Psychiatrist</h2>
+        <h2>Any Insurance</h2>
       </ion-card-content>
     </ion-card>
 
@@ -55,6 +61,7 @@
       <ion-card class="ratingBox">
         <ion-card-content class="rating">
           <h1><b>Phone:</b> {{doctor.phoneNumber}}</h1>
+          <br>
           <h1><b>Webpage:</b> {{doctor.webPage}}</h1>
           <h1><b>LinkedIn:</b> {{doctor.media}}</h1>
           <h1><b>Twitter:</b> {{doctor.media}}</h1>
@@ -75,15 +82,15 @@
     <ion-card class="infoDirection">
       <ion-card-content>
         <ion-title class="cardText">Office Location:</ion-title>
-        <h1> {{business.location}}</h1>
+        <h1 id="locText"> {{business.location}}</h1>
       </ion-card-content>
       
       <ion-card-content id="hours">
         <ion-title class="cardText">Hours:</ion-title>
-        <h1>Mon - Wed  |  9am - 6pm</h1>
-        <h1>Thur - Fri | 10am - 7pm</h1>
-        <h1>Sat | 11am - 5pm</h1>
-        <h1>Sun | Closed</h1>
+        <h1>Mon - Wed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9am - 6pm</h1>
+        <h1>Thur - Fri &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10am - 7pm</h1>
+        <h1>Sat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11am - 5pm</h1>
+        <h1>Sun &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closed</h1>
       </ion-card-content>
       
       <ion-card-content id="map">

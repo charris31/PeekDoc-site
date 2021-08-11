@@ -25,7 +25,7 @@ export class DocInfoPage implements OnInit {
   };
 
   business = {
-    location: '12736 S Avalon Blvd, Los Angeles CA 90061'
+    location: '12736 S Avalon Blvd, Los Angeles CA, 90061'
     
   }
   
