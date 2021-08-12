@@ -93,18 +93,23 @@ ion-toolbar {
   }
 }
 
-
-.bigButton {
-  font-size: 150%;
-  color: white;
-  height: 75px;
-  width: 70%;
-  margin-left: 14%;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-  --background: #3C849F;
-  --border-radius: 10px;
+#button-space {
+  margin-top: 5%;
+  text-align: center;
+  .bigButton {
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    height: 75px;
+    width: 70%;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    --background: #3C849F;
+    --border-radius: 10px;
+    margin-bottom: 5%;
+  }
 }
+
 
 // ion-title {
 //   font-weight: bold;
