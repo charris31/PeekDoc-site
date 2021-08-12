@@ -1,51 +1,65 @@
-.webTitle {
-    font-family: 'Roboto', sans-serif; color: white;
-    font-size: 400%;
-    font-style: normal;
-    font-weight: bold;
-    -webkit-text-stroke-width: 1px;
-    text-align: left;
-    height: 105px;
-   }
+ion-toolbar {
+    --border-style: none;
+}
 
-.headButton {
-    float: right;
-    margin-right: 2%;
-    font-size: 25px;
-    font-weight: bold;
-    height: 65px;
-    margin-top: 1%;
-    --background: none;
-    --box-shadow: none;
+  #website-header{  
+    background-image: url('../../assets/header-image-starter.jpeg');
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+  
+    img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    }
+  
+    h1 {
+      position: relative;
+      bottom: -10px;
+      left: 10px;
+      font-family: 'Roboto', sans-serif; color: white;
+      font-size: 400%;
+      font-style: normal;
+      font-weight: bold;
+      -webkit-text-stroke: 2px #000000;
+    }
+
+    #logo {
+        width: 100%;
+        height: 100px;
+        background-color: rgba(60, 132, 159, 0.5);
+    }
   }
-#bgImg{
-    --background: black;
-    height: 353px;
+
+.header-text-container {
+    width: auto;
+    height: auto;
+    margin-top: 10%;
+    #header-text {
+        text-align: center;
+        font-family: 'Roboto', sans-serif; color: white;
+        font-size: 300%;
+        font-style: normal;
+        font-weight: bold;
+        -webkit-text-stroke: 2px #000000;
+    }
 }
 
-.homeHeader {
-    --background: url('https://cdn.todaymediainc.com/wp-content/uploads/sites/4/2021/07/nurse-shutterstock_1642992973.jpg') no-repeat center/cover fixed;
-    height: 120%;
+#navbar {
+    width: auto;
+    height: auto;
+    float: right;
+    position: relative;
+    top: -70px;
+    margin-right: 10%;
+
+    .nav-link {
+        font-size: 30px;
+        margin-right: 10px;
+    }
 }
 
-// #toolbar {
-//     height: 352px;
-//     background-color: black;
-//     backgro
-// }
-
-.bigText {
-    height: 197px;
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: 50px;
-    line-height: 65px;
-    text-align: center;
-    top: 25px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
 
 #inputText {
     text-align: center;
@@ -55,12 +69,6 @@
     margin-left: 20%;
     margin-top: 2%;
     font-weight: bold;
-}
-
-div {
-    background-color: black;
-    width: 100%;
-    height: 100%;
 }
 
 ion-card {
@@ -73,9 +81,9 @@ ion-card {
 
 .bigBox {
     width: 40%;
-    height: 650px;
+    height: 700px;
     background: #CDE9F3;
-    margin-top: 100px;
+    margin-top: 30px;
     border-radius: 2%;
 }
 
