@@ -1,59 +1,128 @@
-.homeHeader {
-  --background: url('https://www.houstonmethodisthospitalcareers.com/static/sites/www/files/images/global/nurse-group.jpg') no-repeat center/cover fixed  ;
-  height: 150%;
-  width: 100%;
-}
-.webTitle {
- font-family: 'Roboto', sans-serif; color: white;
- font-size: 400%;
- font-style: normal;
- font-weight: bold;
- -webkit-text-stroke-width: 1px;
- text-align: left;
- height: 100%;
+ion-content {
+  --background: url('../../assets/nurse-group-background.jpeg') no-repeat center center/cover;
 }
 
-.headButton {
-  float: right;
-  margin-right: 13%;
-  font-size: 150%;
-  font-weight: bold;
-  // height: 65px;
-  margin-top: 5%;
-  --background: none;
-  --box-shadow: none;
+ion-toolbar {
+  --border-style: none;
 }
+
+#website-header{  
+  background-color: rgba(60, 132, 159, 0.5);
+  width: 100%;
+  height: 15%;
+  display: inline-block;
+
+  img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  }
+
+  h1 {
+    position: relative;
+    top: -5px;
+    left: 10px;
+    font-family: 'Roboto', sans-serif; color: white;
+    font-size: 400%;
+    font-style: normal;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #000000;
+  }
+
+}
+
+#nav-bar {
+  text-align: center;
+  margin-top: 5%;
+
+  .nav-links{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+    --background: #3C849F;
+  }
+}
+
+#card-contents{
+  position: relative;
+  width: 40%;
+  height: auto;
+  color: white;
+  float: right;
+  top: -130px;
+
+  .call-to-action {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+#heading-one {
+  width: 100%;
+  height: auto;
+  color: #000000;
+  margin-top: 20px;
+  padding: 3%;
+
+  .heading-one-one{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: #000000 1.5px;
+  }
+}
+
+#heading-two {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+  
+  .heading-two-two {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: #000000 1.2px;
+  }
+}
+
+
 .bigButton {
   font-size: 150%;
+  color: white;
   height: 75px;
   width: 70%;
   margin-left: 14%;
-  margin-top: 12%;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   --background: #3C849F;
-  --color: white;
   --border-radius: 10px;
-
 }
 
-ion-title {
-  font-weight: bold;
-  color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: right;
-}
+// ion-title {
+//   font-weight: bold;
+//   color: black;
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   text-align: right;
+// }
 
-ion-card {
-  width: 45%;
-  float: right;
-  margin-top: -5.7%;
-  margin-right: -0%;
-  background: white;
-  height: 945px;
-  box-shadow: none;
-  border-radius: 5%;
-}
+// ion-card {
+//   width: 45%;
+//   float: right;
+//   margin-top: -5.7%;
+//   margin-right: -0%;
+//   background: white;
+//   height: 945px;
+//   box-shadow: none;
+//   border-radius: 5%;
+// }
 
 .homeBigtext {
   margin-top: 25%;
@@ -87,35 +156,3 @@ ion-card {
   height: 718px;
 }
 
-// #Logo {
-
-// }
-
-
-// #container {
-//   text-align: center;
-
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-
-// #container strong {
-//   font-size: 20px;
-//   line-height: 26px;
-// }
-
-// #container p {
-//   font-size: 16px;
-//   line-height: 22px;
-
-//   color: #8c8c8c;
-
-//   margin: 0;
-// }
-
-// #container a {
-//   text-decoration: none;
-// }
