@@ -3,11 +3,11 @@ ion-toolbar {
 }
 
   #website-header{  
-    background-image: url('../../assets/header-image-starter.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/header-image-starter.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 60%;
+    height: 50%;
     display: inline-block;
   
     img {
@@ -41,10 +41,11 @@ ion-toolbar {
     width: auto;
     height: auto;
     margin-top: 10%;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 50%;
+    margin-left: 5px;
+
     #header-text {
-        text-align: center;
+        text-align: left;
         font-family: 'Roboto', sans-serif; color: white;
         font-size: 300%;
         font-style: normal;

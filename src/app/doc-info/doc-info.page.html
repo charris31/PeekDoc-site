@@ -1,55 +1,187 @@
-<ion-header>
-  <ion-toolbar class="homeHeader">
-    <ion-button color="dark" fill="clear" class="headButton">Home</ion-button>
-    <ion-button color="dark" fill="clear" class="headButton">Log In</ion-button>
-    <ion-title class="webTitle">
-      Doc Harmony
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header class="ion-no-border"></ion-header>
+<ion-content fullscreen="true">
+  <!-- Header STARTS -->
+  <div id="website-header">
+    <div id="logo-container">
+      <div id="logo">
+        <img src="../../assets/DocHarmony.png" width="100px" height="99px" />
+        <h1 id="docharmony-title">Doc Harmony</h1>
+      </div>
+    </div>
+    <!-- Header nav bar -->
+    <div id="navbar">
+      <ion-button color="dark" fill="clear" class="nav-link">Home</ion-button>
+      <ion-button color="dark" fill="clear" class="nav-link">Log In</ion-button>
+    </div>
+  </div>
+  <!--END OF header-->
 
-<ion-item>
-  <ion-card class="suggestBox">
-    <ion-card-header>
-      <ion-card-title id="suggestTitle">Suggestions</ion-card-title>
-    </ion-card-header>
-    <ion-card class="docBox">
-      <ion-card-content>
-        <ion-avatar class="suggestBoxImg">
-          <img src="https://bit.ly/3kVdrCx">
-        </ion-avatar>
-        <h1 id="sugText"><b>Jane Doe</b></h1>
-        <h2 id="sugText">Asian \ Korean</h2>
-        <h2 id="sugText">Dentist</h2>
-        <h2 id="sugText">Any Insurance</h2>
-      </ion-card-content>
-    </ion-card>
+  <div id="main-container">
+    <!-- MAIN CONTENT -->
+    <div class="main-content-container">
+      <ion-card class="doctor-profile-card">
+        <div id="review-container">
+          <h1 class="section-header">Rate and Review</h1>
+          <ion-card class="review-rate-card">
+            <ion-card-content>
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+              <div class="review-section">
+                <ion-card id="review-section-section">
+                  <ion-card-content>
+                    <ion-card class="suggestions-card">
+                      <ion-card-content>
+                        <ion-avatar class="reviewer-icon">
+                          <img
+                            src="https://louisville.edu/enrollmentmanagement/images/person-icon/image"
+                          />
+                        </ion-avatar>
+                        <div class="suggestion-details">
+                          <h1 id="sugText"><b>Finn</b></h1>
+                          <h2 id="sugText">Great Physician!</h2>
+                          <h2 id="sugText">
+                            John really cares for each of his patients and it
+                            shows!
+                          </h2>
+                        </div>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-card-content>
+                  <ion-input placeholder="Leave A Review..."></ion-input>
+                </ion-card>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        <div id="contact-container">
+          <h1 class="section-header">Contacts</h1>
+          <ion-card class="contact-info-card">
+            <ion-card-content>
+              <h1 class="contact-details">
+                <b>Phone:</b> {{doctor.phoneNumber}}
+              </h1>
+              <h1 class="contact-details">
+                <b>Webpage:</b> {{doctor.webPage}}
+              </h1>
+              <h1 class="contact-details"><b>LinkedIn:</b> {{doctor.media}}</h1>
+              <h1 class="contact-details"><b>Twitter:</b> {{doctor.media}}</h1>
+              <h1 class="contact-details"><b>Facebook:</b> {{doctor.media}}</h1>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        <div id="info-container">
+          <h1
+            style="
+              font-family: 'Roboto' sans-serif;
+              font-size: 200%;
+              font-weight: bold;
+            "
+          >
+            Info
+          </h1>
+          <ion-card class="info-card">
+            <ion-card-content>
+              <ion-avatar class="docImg">
+                <img src="https://bit.ly/3kLZxm9" />
+              </ion-avatar>
+              <h1 class="infoText"><b>Name:</b> {{doctor.name}}</h1>
+              <h1 class="infoText"><b>Gender:</b> {{doctor.gender}}</h1>
+              <h1 class="infoText"><b>Age:</b> {{doctor.age}}</h1>
+              <h1 class="infoText"><b>Race:</b> {{doctor.race}}</h1>
+              <h1 class="infoText"><b>Birth Place:</b> {{doctor.birth}}</h1>
+              <h1 class="infoText"><b>Studied:</b> {{doctor.school}}</h1>
+              <h1 class="infoText">
+                <b>Specialties:</b> {{doctor.specialties}}
+              </h1>
+              <h1 class="infoText"><b>Hobbies:</b> {{doctor.hobbies}}</h1>
+            </ion-card-content>
+          </ion-card>
+        </div>
+        <div id="location-container">
+          <h1 class="section-header">Clinic Location</h1>
+          <ion-card class="location-info-card">
+            <div class="location-header">
+              <ion-card-title class="location-title">Location: </ion-card-title>
+              <h1 id="locText">{{business.location}}</h1>
+            </div>
+            <ion-card-content id="map">
+              <div #map id="map"></div>
+            </ion-card-content>
+            <div class="schedule-header">
+              <ion-card-title class="location-title">Hours: </ion-card-title>
+              <p class="schedule">Mon - Wed, 9am - 6pm</p>
+              <p class="schedule">Thurs - Fri, 10am - 7pm</p>
+              <p class="schedule">Sat, 11am - 5pm</p>
+              <p class="schedule">Sun, Closed</p>
+            </div>
+          </ion-card>
+        </div>
+      </ion-card>
+    </div>
+    <!-- SUGGESTION BOX -->
+    <div class="main-suggestion-box-container">
+      <ion-card class="main-suggestions-card">
+        <ion-card-header>
+          <ion-card-title id="suggestTitle">Suggestions</ion-card-title>
+        </ion-card-header>
+        <ion-card class="suggestions-card">
+          <ion-card-content>
+            <ion-avatar class="suggestBoxImg">
+              <img src="https://bit.ly/3kVdrCx" />
+            </ion-avatar>
+            <div class="suggestion-details">
+              <h1 id="sugText"><b>Jane Doe</b></h1>
+              <h2 id="sugText">Asian \ Korean</h2>
+              <h2 id="sugText">Dentist</h2>
+              <h2 id="sugText">Any Insurance</h2>
+            </div>
+          </ion-card-content>
+        </ion-card>
 
-    <ion-card class="docBox">
-      <ion-card-content>
-        <ion-avatar class="suggestBoxImg">
-          <img src="https://bit.ly/3x7FHEA">
-        </ion-avatar> 
-        <h1 id="sugText"><b>Andrew Rue</b></h1>
-        <h2 id="sugText">Arabic \ Middle Eastern</h2>
-        <h2 id="sugText">Surgeon</h2>
-        <h2 id="sugText">Any Insurance</h2>
-      </ion-card-content>
-    </ion-card>
+        <ion-card class="suggestions-card">
+          <ion-card-content>
+            <ion-avatar class="suggestBoxImg">
+              <img src="https://bit.ly/3x7FHEA" />
+            </ion-avatar>
+            <div class="suggestion-details">
+              <h1 id="sugText"><b>Andrew Rue</b></h1>
+              <h2 id="sugText">Arabic \ Middle Eastern</h2>
+              <h2 id="sugText">Surgeon</h2>
+              <h2 id="sugText">Any Insurance</h2>
+            </div>
+          </ion-card-content>
+        </ion-card>
 
-    <ion-card class="docBox">
-      <ion-card-content>
-        <ion-avatar class="suggestBoxImg">
-          <img src="https://bit.ly/3ePLTue">
-        </ion-avatar>
-        <h1 id="sugText"><b>Sofia Garcia</b></h1>
-        <h2 id="sugText">Latin \ Puerto Rican</h2>
-        <h2 id="sugText">Psychiatrist</h2>
-        <h2 id="sugText">Any Insurance</h2>
-      </ion-card-content>
-    </ion-card>
+        <ion-card class="suggestions-card">
+          <ion-card-content>
+            <ion-avatar class="suggestBoxImg">
+              <img src="https://bit.ly/3ePLTue" />
+            </ion-avatar>
+            <div class="suggestion-details">
+              <h1 id="sugText"><b>Sofia Garcia</b></h1>
+              <h2 id="sugText">Latin \ Puerto Rican</h2>
+              <h2 id="sugText">Psychiatrist</h2>
+              <h2 id="sugText">Any Insurance</h2>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
 
-  </ion-card>
+<!-- <ion-item>
+  
 
   <ion-card class="bigCard">
     <div id="topText">
@@ -69,11 +201,11 @@
         </ion-card-content>
       </ion-card>
       <ion-card class="moreAbout">
-      <ion-card-content>
-        <!-- <ion-card-content id="ratingImg">
+      <ion-card-content> -->
+<!-- <ion-card-content id="ratingImg">
           <img src="https://bit.ly/36M710c">
         </ion-card-content> -->
-        <ion-input placeholder="Leave A Review..."></ion-input>
+<!-- <ion-input placeholder="Leave A Review..."></ion-input>
       </ion-card-content>
       </ion-card>
     </div>
@@ -101,26 +233,4 @@
 
     <ion-toolbar class="sectionToolbar">
 
-    </ion-toolbar>
-
-
-
-
-    
-    <ion-card class="bigInfoBox">
-      <ion-avatar class="docImg">
-        <img src="https://bit.ly/3kLZxm9">
-      </ion-avatar>
-      <ion-card-content id="infoCard">
-        <h1 class="infoText"><b>Name:</b> {{doctor.name}}</h1>
-        <h1 class="infoText"><b>Gender:</b> {{doctor.gender}}</h1>
-        <h1 class="infoText"><b>Age:</b> {{doctor.age}}</h1>
-        <h1 class="infoText"><b>Race:</b> {{doctor.race}}</h1>
-        <h1 class="infoText"><b>Birth Place:</b> {{doctor.birth}}</h1>
-        <h1 class="infoText"><b>Studied:</b> {{doctor.school}}</h1>
-        <h1 class="infoText"><b>Specialties:</b> {{doctor.specialties}}</h1>
-        <h1 class="infoText"><b>Hobbies:</b> {{doctor.hobbies}}</h1>
-      </ion-card-content>
-    </ion-card>
-  </ion-card>
-</ion-item>
+    </ion-toolbar>-->
