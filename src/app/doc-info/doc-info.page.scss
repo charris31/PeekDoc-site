@@ -10,11 +10,11 @@ ion-header {
 }
 
 
-#website-header{  
+#website-header{
     max-width: 100%;
     height: 13%;
     background-color: rgba(60, 132, 159, 0.5);
-        
+
 }
 
 #logo-container {
@@ -42,7 +42,7 @@ ion-header {
     top: -30px;
     position: relative;
     margin-left: 10px;
-          
+
 }
 
   #navbar {
@@ -73,15 +73,16 @@ ion-header {
         float: right;
         margin-right: 100px;
     }
-    
+
     .main-suggestion-box-container {
         width: 20%;
         height: auto;
         color: black;
-        text-align: center;
+        text-align: left;
         float: left;
         margin-left: 80px;
         margin-top: 5px;
+
     }
 }
 
@@ -93,6 +94,8 @@ ion-header {
     font-family: 'Roboto', sans-serif;
     font-size: 300%;
     font-weight: bold;
+
+
     }
 }
 
@@ -114,8 +117,8 @@ ion-header {
                 // border-style: dotted;
                 width: 100%;
                 height: 200px;
-                
-                
+
+
             }
         }
     }
@@ -134,8 +137,9 @@ ion-header {
                 color: black;
                 width: 100%;
                 height: auto;
+                line-height: 41px;
                 font-family: 'Roboto' sans-serif;
-                font-size: 33px;
+                font-size: 24px;
             }
         }
     }
@@ -158,6 +162,7 @@ ion-header {
         width: 30%;
         height: 800px;
         float: right;
+        text-align: center;
 
         .info-card {
             --background: #EDF1F2;
@@ -197,8 +202,8 @@ ion-header {
 
 .suggestion-details {
     display: block;
-    margin-left: auto;
-    margin-right: 8%;
+    margin-left: 40%;
+    //margin-right: 8%;
 }
 
 // This is for the rating system used from the resource i sent you last night
@@ -227,11 +232,11 @@ ion-header {
     content: '★ ';
 }
 .rate > input:checked ~ label {
-    color: #ffc700;    
+    color: #ffc700;
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
+    color: #deb217;
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
@@ -299,7 +304,7 @@ ion-header {
 //     float: right;
 //     margin-right: 229px;
 //     --background: #EDF1F2;
-// }  
+// }
 
 // .bigInfoBox {
 //     margin-top: -59.7%;
@@ -381,7 +386,7 @@ ion-header {
     // border-color: brown;
     float: left;
     margin-left: 15px;
-    
+
     #locText {
         color: black;
         width: 100%;
@@ -391,7 +396,7 @@ ion-header {
     .location-title {
         color: black;
         font-family: 'Roboto' sans-serif;
-        font-size: 250%; 
+        font-size: 250%;
     }
 }
 
@@ -400,7 +405,7 @@ ion-header {
     margin-left: 15px;
     // border-style: dotted;
     // border-color: brown;
-   
+
     #locText {
         color: black;
         width: 100%;
@@ -409,7 +414,7 @@ ion-header {
     .location-title {
         color: black;
         font-family: 'Roboto' sans-serif;
-        font-size: 250%;  
+        font-size: 250%;
     }
 
     .schedule {
@@ -444,7 +449,7 @@ ion-header {
 // }
 
 // // .hourText{
-    
+
 // // }
 
 // #suggestTitle {
@@ -468,7 +473,7 @@ ion-header {
 // }
 
 // // ion-title {
-    
+
 // // }
 // .suggestBoxImg {
 //     float: left;

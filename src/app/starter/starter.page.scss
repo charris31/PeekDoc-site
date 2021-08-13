@@ -2,14 +2,14 @@ ion-toolbar {
     --border-style: none;
 }
 
-  #website-header{  
+  #website-header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/header-image-starter.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 50%;
     display: inline-block;
-  
+
     img {
         position: relative;
         float: left;
@@ -17,7 +17,7 @@ ion-toolbar {
         height: 100px;
         top: -30px;
     }
-  
+
     h1 {
       position: relative;
       top: -40px;
