@@ -1,204 +1,481 @@
-.webTitle {
+// removes extra space from header bar not needed for web apps.
+ion-header {
+    display: block;
+    position: relative;
+    -ms-flex-order: -1;
+    order: -1;
+    width: 100%;
+    margin-bottom: -20px;
+    z-index: 0;
+}
+
+
+#website-header{
+    max-width: 100%;
+    height: 13%;
+    background-color: rgba(60, 132, 159, 0.5);
+
+}
+
+#logo-container {
+    width: auto;
+
+    #logo {
+        float: left;
+        max-width: 100%;
+        height: auto;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+
+}
+
+#docharmony-title {
+    display: inline;
     font-family: 'Roboto', sans-serif; color: white;
     font-size: 400%;
     font-style: normal;
     font-weight: bold;
-    -webkit-text-stroke-width: 1px;
-    text-align: left;
-    height: 105px;
-   }
-.headButton {
+    -webkit-text-stroke: 2px #000000;
+    width: 50%;
+    height: 50%;
+    top: -30px;
+    position: relative;
+    margin-left: 10px;
+
+}
+
+  #navbar {
+    width: auto;
+    height: auto;
     float: right;
-    margin-right: 100px;
-    font-size: 25px;
-    height: 65px;
-    margin-top: 20px;
-    --box-shadow: none;
-  }
+    margin-right: 10%;
+    position: relative;
+    top: 60px;
 
-  .homeHeader {
-    --background: #3C849F;
-    height: 105px;
+    .nav-link {
+        font-size: 30px;
+        margin-right: 10px;
+    }
 }
 
-ion-item {
-    --background: none;
+#main-container {
+    max-width: 100%;
+    height: auto;
+    // background-color: blue;
+
+    .main-content-container {
+        margin-top: 5px;
+        width: 70%;
+        height: auto;
+        color: black;
+        text-align: center;
+        float: right;
+        margin-right: 100px;
+    }
+
+    .main-suggestion-box-container {
+        width: 20%;
+        height: auto;
+        color: black;
+        text-align: left;
+        float: left;
+        margin-left: 80px;
+        margin-top: 5px;
+
+    }
 }
 
-.suggestBox {
-    width: 20%;
-    margin-left: 3%;
-    margin-bottom: 100px;
-    height: 88.8%;
-    --background: white;
+.main-suggestions-card {
+    --background: #ffffff;
+    height: 800px;
+    #suggestTitle {
     color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 300%;
     font-weight: bold;
+
+
+    }
 }
 
-.docBox {
-    --background: #EDF1F2;
+.doctor-profile-card {
+    width: 100%;
+    --background: #ffffff;
+    #review-container {
+        // background-color: green;
+        color: black;
+        text-align: left;
+        width: 40%;
+        height: 400px;
+        float: left;
+
+        .review-rate-card {
+            --background: #EDF1F2;
+            .review-section {
+                // border-color: brown;
+                // border-style: dotted;
+                width: 100%;
+                height: 200px;
+
+
+            }
+        }
+    }
+
+    #contact-container {
+        // background-color: blue;
+        color: black;
+        text-align: left;
+        width: 30%;
+        height: 400px;
+        float: left;
+
+        .contact-info-card {
+            --background: #EDF1F2;
+            .contact-details {
+                color: black;
+                width: 100%;
+                height: auto;
+                line-height: 41px;
+                font-family: 'Roboto' sans-serif;
+                font-size: 24px;
+            }
+        }
+    }
+
+    #location-container {
+        // background-color: coral;
+        color: black;
+        text-align: left;
+        width: 70%;
+        height: 780px;
+
+        .location-info-card {
+            --background: #EDF1F2;
+        }
+    }
+
+    #info-container {
+        // background-color:darkslateblue;
+        color: black;
+        width: 30%;
+        height: 800px;
+        float: right;
+        text-align: center;
+
+        .info-card {
+            --background: #EDF1F2;
+        }
+    }
 }
 
-.bigCard {
-    width: 1440px;
-    height: 875px;
-    margin-bottom: 100px;
-    // --background: rgba(198, 234, 245, 0.527);
-    --background: none;
-    margin-left: 45px;
+#review-section-section {
+    --background:#ffffff;
 }
 
-.infoDirection {
-    height: 53%;
-    width: 72%;
-    margin-left: 3%;
-    margin-top: 2%;
-    --background: #EDF1F2;
+.section-header {
+    font-family: 'Roboto' sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+    margin-left: 10px;
+}
+
+.suggestions-card {
+    --background:#EDF1F2;
     color: black;
-    font-weight: bold;
 }
 
-.moreAbout {
-    height: 100%;
-    width: 40%;
-    // width: 40%;
-    --background: #EDF1F2;
-    font-size: 25px;
-
+.suggestBoxImg {
+    width: 100px;
+    height: 100px;
+    float: left;
 }
 
-.ratingBox {
-
-    height: 100%;
-    width: 39%;
-    float: right;
-    margin-right: 229px;
-    --background: #EDF1F2;
-}  
-
-.bigInfoBox {
-    margin-top: -59.7%;
-    float: right;
-    width: 22%;
-    height: 88%;
-    --background: #EDF1F2;
-
+.reviewer-icon {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
 }
+
+.suggestion-details {
+    display: block;
+    margin-left: 40%;
+    //margin-right: 8%;
+}
+
+// This is for the rating system used from the resource i sent you last night
+.rate {
+    height: 46px;
+    // border-style: dotted;
+    // border-color: blueviolet;
+    margin-right: 35%;
+    margin-left: auto;
+    display: block;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+// RATING ENDS HEERE
+
+.reviews{
+    --ion-item-background: #D5DBDD;
+}
+
+.reviews-list {
+    --ion-item-list: #D5DBDD;
+}
+
+// .suggestBox {
+//     width: 20%;
+//     margin-left: 3%;
+//     margin-bottom: 100px;
+//     height: 88.8%;
+//     --background: white;
+//     color: black;
+//     font-weight: bold;
+// }
+
+// .docBox {
+//     --background: #EDF1F2;
+// }
+
+// .bigCard {
+//     width: 1440px;
+//     height: 875px;
+//     margin-bottom: 100px;
+//     // --background: rgba(198, 234, 245, 0.527);
+//     --background: none;
+//     margin-left: 45px;
+// }
+
+// .infoDirection {
+//     height: 53%;
+//     width: 72%;
+//     margin-left: 3%;
+//     margin-top: 2%;
+//     --background: #EDF1F2;
+//     color: black;
+//     font-weight: bold;
+// }
+
+// .moreAbout {
+//     height: 100%;
+//     width: 40%;
+//     // width: 40%;
+//     --background: #EDF1F2;
+//     font-size: 25px;
+
+// }
+
+// .ratingBox {
+
+//     height: 100%;
+//     width: 39%;
+//     float: right;
+//     margin-right: 229px;
+//     --background: #EDF1F2;
+// }
+
+// .bigInfoBox {
+//     margin-top: -59.7%;
+//     float: right;
+//     width: 22%;
+//     height: 88%;
+//     --background: #EDF1F2;
+
+// }
 
 .docImg {
-    transform: scale(3);
+    // transform: scale(3);
+    width: 45%;
+    height: 30%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    display: block;
+    // margin-top: 100px;
     box-shadow: 1px 1px 4px;
 }
 
-.sectionHeader {
-    float: left;
-    font-size: 30px;
-    // height: 65px;
-    // margin-top: 20px;
-    margin-left: 27px;
-    color: black;
-    font-weight: bold;
-    margin-top: 20px;
-}
-#ratingHeader {
-    margin-left: -4px;
-}
-#contactHeader {
-    margin-left: 233px;
-}
-#infoHeader {
-    margin-left: 470px;
-}
-#locHeader {
-    margin-top: -5px;
-}
+// .sectionHeader {
+//     float: left;
+//     font-size: 30px;
+//     // height: 65px;
+//     // margin-top: 20px;
+//     margin-left: 27px;
+//     color: black;
+//     font-weight: bold;
+//     margin-top: 20px;
+// }
+// #ratingHeader {
+//     margin-left: -4px;
+// }
+// #contactHeader {
+//     margin-left: 233px;
+// }
+// #infoHeader {
+//     margin-left: 470px;
+// }
+// #locHeader {
+//     margin-top: -5px;
+// }
 
-#infoCard {
-    margin-top: 25%;
-}
-.sectionToolbar {
-    width: 75%;
-    --background: white;
-    color: black;
-}
+// #infoCard {
+//     margin-top: 25%;
+// }
+// .sectionToolbar {
+//     width: 75%;
+//     --background: white;
+//     color: black;
+// }
 
-.cardText {
-    font-size: 30px;
-}
+// .cardText {
+//     font-size: 30px;
+// }
 
 .infoText {
-    margin-top: 7%;
+    margin-top: 9%;
     color: black;
-    
 }
 
-.rating {
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-}
+// .rating {
+//     color: black;
+//     font-weight: bold;
+//     font-size: 20px;
+// }
 
 #map {
-    height: 395px;
-    width: 638px;
+    height: 300px;
+    width: 500px;
     float: right;
-    margin-top: -50px;
+    margin-right: 20px;
 }
 
-#sugText{
-    color: black;
-    margin-left: 30%;
-}
-
-#topCards {
-    display: inline-block;
-    margin-left: 30px;
-    height: 30%;
-    width: 90%;
-}
-
-#topText{
-    display: inline-block;
-    margin-left: 30px;
-}
-
-#hours {
-    display: inline-block;
-    font-size: 20px;
-}
-
-// .hourText{
-    
-// }
-
-#suggestTitle {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-}
-
-#locText {
+.location-header {
     width: 30%;
-    text-align: center;
-    font-size: 25px;
-}
-
-ion-input {
-    --background: white;
-    margin-top: 40%;
-    height: 10%;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-// ion-title {
-    
-// }
-.suggestBoxImg {
+    // border-style: dotted;
+    // border-color: brown;
     float: left;
-    margin-top: 5%;
-    transform: scale(1.3);
+    margin-left: 15px;
+
+    #locText {
+        color: black;
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    .location-title {
+        color: black;
+        font-family: 'Roboto' sans-serif;
+        font-size: 250%;
+    }
 }
+
+.schedule-header {
+    width: 30%;
+    margin-left: 15px;
+    // border-style: dotted;
+    // border-color: brown;
+
+    #locText {
+        color: black;
+        width: 100%;
+    }
+
+    .location-title {
+        color: black;
+        font-family: 'Roboto' sans-serif;
+        font-size: 250%;
+    }
+
+    .schedule {
+        color: black;
+        font-family: 'Roboto' sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+}
+
+// #sugText{
+//     color: black;
+//     margin-left: 30%;
+// }
+
+// #topCards {
+//     display: inline-block;
+//     margin-left: 30px;
+//     height: 30%;
+//     width: 90%;
+// }
+
+// #topText{
+//     display: inline-block;
+//     margin-left: 30px;
+// }
+
+// #hours {
+//     display: inline-block;
+//     font-size: 20px;
+// }
+
+// // .hourText{
+
+// // }
+
+// #suggestTitle {
+//     color: black;
+//     font-weight: bold;
+//     text-align: center;
+// }
+
+// #locText {
+//     width: 30%;
+//     text-align: center;
+//     font-size: 25px;
+// }
+
+// ion-input {
+//     --background: white;
+//     margin-top: 40%;
+//     height: 10%;
+//     border-radius: 10px;
+//     font-size: 15px;
+// }
+
+// // ion-title {
+
+// // }
+// .suggestBoxImg {
+//     float: left;
+//     margin-top: 5%;
+//     transform: scale(1.3);
+// }

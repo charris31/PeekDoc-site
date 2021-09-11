@@ -1,115 +1,69 @@
-<ion-header>
-  <ion-toolbar class="homeHeader">
-    <ion-button color="dark" fill="clear" class="headButton">Home</ion-button>
-    <ion-button color="dark" fill="clear" class="headButton">Log In</ion-button>
-    <ion-title class="webTitle">
-      Doc Harmony
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header class="ion-no-border"></ion-header>
 
-<ion-toolbar class="filterBoxes">
-  <ion-searchbar
-            placeholder='Search'
-            [(ngModel)]="searchTerm"
-            animated></ion-searchbar>
+<ion-content fullscreen="true">
+  <div id="website-header">
+    <div id="logo-container">
+      <div id="logo">
+        <img src="../../assets/DocHarmony.png" width="150px" height="149px" />
+        <h1 id="docharmony-title">Doc Harmony</h1>
+      </div>
+    </div>
+    <!-- Header nav bar -->
+    <div id="navbar">
+      <ion-button color="dark" fill="clear" class="nav-link">Home</ion-button>
+      <ion-button color="dark" fill="clear" class="nav-link">Log In</ion-button>
+    </div>
+  </div>
 
-              <!-- <ion-list>
-                <ion-item>
-                  <ion-label>Physician</ion-label>
-                  <ion-toggle slot="start" name="blueberry" (ionChange) = "physicianToggle()"></ion-toggle>
-                </ion-item>
-        
-                <ion-item>
-                  <ion-label>Dentist</ion-label>
-                  <ion-toggle slot="start" name="blueberry" (ionChange) = "dentistToggle()"></ion-toggle>
-                </ion-item>
-        
-                <ion-item>
-                  <ion-label>Psychiatrist</ion-label>
-                  <ion-toggle slot="start" name="blueberry" (ionChange) = "psychiatristToggle()"></ion-toggle>
-                </ion-item>
-        
-                <ion-item>
-                  <ion-label>Surgeon</ion-label>
-                  <ion-toggle slot="start" name="blueberry" (ionChange) = "surgeonToggle()"></ion-toggle>
-                </ion-item>
-              </ion-list> -->
+  <!-- Doctor list and filter -->
+  <ion-card class="doctor-list-container">
+    <ion-card-title class="doctor-list-title"
+      >Search for Medical Professionals in one place.</ion-card-title
+    >
+    <!-- SEARCH BAR -->
+    <div class="search-bar-container">
+      <ion-searchbar
+        placeholder="Search"
+        [(ngModel)]="searchTerm"
+        animated
+      ></ion-searchbar>
+    </div>
 
-  <ion-button (click)="presentPopover()" expand="block" shape="round" fill="clear" id="filterButton">
-    Edit
-    <ion-icon name="filter-outline"></ion-icon>
-  </ion-button>
-  
-  <!-- <ion-list>
-    <ion-item>
-      <ion-label>Specialty</ion-label>
-      <ion-select [(ngModel)]="searchTerm" multiple="true">
-        <ion-select-option *ngFor="let doctor of doctors" ionChange="onChange(doctor.specialty)" value="{{doctor.specialty}}">{{doctor.specialty}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Race/Ethnicity</ion-label>
-      <ion-select [(ngModel)]="doctors" multiple="true">
-        <ion-select-option *ngFor="let doctor of doctors">{{doctor.race}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Gender</ion-label>
-      <ion-select [(ngModel)]="doctors" multiple="true">
-        <ion-select-option *ngFor="let doctor of doctors">{{doctor.gender}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Languages</ion-label>
-      <ion-select [(ngModel)]="doctors" multiple="true">
-        <ion-select-option>English</ion-select-option>
-        <ion-select-option>Spanish</ion-select-option>
-        <ion-select-option>Korean</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Insurance</ion-label>
-      <ion-select [(ngModel)]="doctors" multiple="true">
-        <ion-select-option>Any</ion-select-option>
-        <ion-select-option>Kaiser Permanente</ion-select-option>
-        <ion-select-option>Health Net</ion-select-option>
-        <ion-select-option>Anthem Blue Cross</ion-select-option>
-        <ion-select-option>LA Care Health Plan</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Special Needs</ion-label>
-      <ion-select [(ngModel)]="doctors" multiple="true">
-        <ion-select-option>Diabeties</ion-select-option>
-        <ion-select-option>ASD (Autism Spectrum)</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list> -->
+    <!-- Filter Button -->
+    <ion-button
+      class="filter-button"
+      (click)="presentPopover()"
+      expand="block"
+      shape="round"
+      id="filterButton"
+    >
+      filter by categories
+      <ion-icon name="filter-outline"></ion-icon>
+    </ion-button>
 
-</ion-toolbar>
-
-<ion-grid>
-  <ion-row>
-    <ion-col *ngFor="let doctor of doctors | filter:searchTerm" size= "3">
-      <ion-card [routerLink]="['/doc-info']">
-      <ion-avatar>
-        <img src={{doctor.pic}} />
-      </ion-avatar>
-      <ion-card-content>
-        <h1>{{doctor.name}}</h1>
-      </ion-card-content>
-      <ion-card-content id="docInfo">
-        <p><b>Field:</b> {{doctor.specialty}}</p>
-        <p><b>Race/Ethnicity:</b> {{doctor.race}}</p>
-        <p><b>Gender:</b> {{doctor.gender}}</p>
-        <p><b>Lanuage(s):</b> {{doctor.language}}</p>
-        <p><b>Insurance:</b> {{doctor.insurance}}</p>
-      </ion-card-content>
-    </ion-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+    <ion-grid class="doctor-list-background">
+      <ion-row>
+        <ion-col *ngFor="let doctor of doctors | filter:searchTerm" size="3">
+          <ion-card class="doctor-card" [routerLink]="['/doc-info']">
+            <ion-avatar class="doctor-icon">
+              <img src="{{doctor.pic}}" />
+            </ion-avatar>
+            <ion-card-content class="doctor-name">
+              <h1>{{doctor.name}}</h1>
+            </ion-card-content>
+            <ion-card-content id="docInfo" class="doctor-info">
+              <p><b>Field:</b> {{doctor.specialty}}</p>
+              <p><b>Race/Ethnicity:</b> {{doctor.race}}</p>
+              <p><b>Gender:</b> {{doctor.gender}}</p>
+              <p><b>Lanuage(s):</b> {{doctor.language}}</p>
+              <p><b>Insurance:</b> {{doctor.insurance}}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
 
 <!-- <ion-card class="bigList">
   <ion-content>
@@ -130,7 +84,7 @@
         </ion-card>
       </ion-item> -->
 
-    <!-- <ion-card (click)="nextpage()" routerLink="/doc-info">
+<!-- <ion-card (click)="nextpage()" routerLink="/doc-info">
       <ion-avatar>
         <img src="https://bit.ly/36qMUof">
       </ion-avatar>
@@ -140,5 +94,5 @@
         <p>I am a good doctor for you!</p>
       </ion-card-content>
     </ion-card> -->
-  <!-- </ion-content>
+<!-- </ion-content>
 </ion-card> -->

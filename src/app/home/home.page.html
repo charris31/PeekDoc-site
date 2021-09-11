@@ -1,33 +1,49 @@
-<ion-header>
-  <ion-toolbar class="homeHeader">
-    <ion-title class="webTitle">
-      Doc Harmony
-    </ion-title>
-    <ion-card>
-      <ion-card-header>
-        <ion-button class="headButton">Log In</ion-button>
-        <ion-button class="headButton">About Us</ion-button>
-        <ion-button class="headButton">Home</ion-button>
-        <ion-card-subtitle class="homeBigtext">Search for minority doctors that specialize in your needs. Just some few clicks away to find out which doctor fits you best.</ion-card-subtitle>
-        <ion-card-title class="homeSmalltext">Search for medical help with the doctor of your choice.</ion-card-title>
-        <ion-button class="bigButton" fill="clear" [routerLink]="['/starter']">Begin Looking Now</ion-button>
-      </ion-card-header>
-    </ion-card>
-    <ion-avatar id="Logo">
-      <img src="https://files.slack.com/files-pri/T17R4TFAM-F02B4SC9ZND/doc_harmony_logo.png"/>
-    </ion-avatar>
-  </ion-toolbar>
-</ion-header>
-<!-- Sub Header for Home Page -->
-<!-- <ion-toolbar class="homeSub">
-  <ion-title class="homeBigtext">Search for medical help with the doctor of your liking</ion-title>
-  <ion-title class="homeSmalltext">Search for hundreds of doctors around you that specialize in your need. All in one page.</ion-title>
-  <ion-button class="bigButton" color="secondary">Begin Looking Now</ion-button>
-  <ion-icon size="large"></ion-icon>
-</ion-toolbar>
-</ion-header> -->
+<ion-header class="ion-no-border"> </ion-header>
 
-  <!-- <div id="container"> -->
-    <!-- <strong>Ready to create an app?</strong> -->
-    <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
-  <!-- </div> -->
+<ion-content fullscreen="true">
+  <!-- Header -->
+  <div id="website-header">
+    <div id="logo-container">
+      <div id="logo">
+        <img src="../../assets/DocHarmony.png" width="150px" height="149px" />
+        <h1 id="docharmony-title">Doc Harmony</h1>
+      </div>
+    </div>
+  </div>
+  <!-- END OF HEADER-->
+
+  <!--Card Content -->
+  <div id="card-contents">
+    <ion-card class="call-to-action">
+      <ion-card-content>
+        <div id="nav-bar">
+          <ion-button class="nav-links">Login</ion-button>
+          <ion-button class="nav-links">About Us</ion-button>
+          <ion-button class="nav-links">Home</ion-button>
+        </div>
+        <div id="heading-one">
+          <ion-card-subtitle class="homeBigtext"
+            >Search for minority doctors that specialize in your needs. Just
+            some few clicks away to find out which doctor fits you
+            best.</ion-card-subtitle
+          >
+          <ion-card-title class="homeSmalltext"
+            >Search for medical help with the doctor of your
+            choice.</ion-card-title
+          >
+        </div>
+        <!-- <div id="heading-two">
+          <ion-card-title class="heading-two-two"
+            >Search for medical help with the doctor of your
+            choice.</ion-card-title
+          >
+        </div> -->
+        <div id="button-space">
+          <ion-button class="bigButton" [routerLink]="['/starter']"
+            >Begin Looking Now</ion-button
+          >
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
